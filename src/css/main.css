@@ -1,0 +1,8 @@
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px; }
+  #header .header__img {
+    display: block; }
+  #header .header__email {
+    text-decoration: none; }

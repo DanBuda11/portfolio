@@ -1,0 +1,14 @@
+#header {
+  display: flex;
+  justify-content: space-evenly;
+  height: 100px;
+
+  .header__img {
+    display: block;
+    // width: 40%;
+  }
+
+  .header__email {
+    text-decoration: none;
+  }
+}
