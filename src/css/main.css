@@ -1,8 +1,27 @@
 #header {
   display: flex;
-  justify-content: space-evenly;
-  height: 100px; }
+  justify-content: space-between;
+  padding: 10px; }
   #header .header__img {
-    display: block; }
+    height: 100px; }
   #header .header__email {
-    text-decoration: none; }
+    text-decoration: none;
+    align-self: center; }
+
+#major .major__project .major__project--header {
+  display: flex;
+  justify-content: space-around; }
+  #major .major__project .major__project--header .major__project--desktop {
+    height: 100px; }
+  #major .major__project .major__project--header .major__project--mobile {
+    height: 100px; }
+
+#major .major__project .major__project--techblock {
+  display: flex;
+  justify-content: space-evenly; }
+
+#minor .minor__project {
+  display: flex;
+  justify-content: space-evenly; }
+  #minor .minor__project .minor__project--image {
+    height: 80px; }
