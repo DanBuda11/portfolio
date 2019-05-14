@@ -1,29 +1,77 @@
+html {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#about, #major, #minor, #skills, #codepen, #footer {
+  margin: 3rem 0;
+  padding: 0 15px;
+}
+
+.section__title {
+  margin-bottom: 1rem;
+}
+
+.section__title.right {
+  text-align: right;
+}
+
 #header {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   padding: 10px;
 
   .header__img {
     height: 100px;
   }
 
-  .header__email {
-    text-decoration: none;
-    align-self: center;
+  .header__textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    .header__title {
+      margin: 0;
+    }
+
+    .header__email {
+    }
+  }
+}
+
+#about {
+
+  .about__blurb {
+    line-height: 1.5;
   }
 }
 
 #major {
   .major__project {
+
     .major__project--header {
       display: flex;
-      justify-content: space-around;
+      justify-content: space-between;
 
       .major__project--desktop {
         height: 100px;
       }
 
       .major__project--titleblock {
+        display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      flex-grow: 2;
 
         .major__project--title {
 
@@ -40,7 +88,12 @@
 
       .major__project--mobile {
         height: 100px;
+        // display: none;
       }
+    }
+
+    .major__project--description {
+      line-height: 1.5;
     }
 
     .major__project--techblock {
@@ -58,25 +111,125 @@
 
   .minor__project {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin: 2rem 0;
 
-    .minor__project--image {
-      height: 80px;
+    .minor__project--img {
+      height: 85px;
+      flex-grow: 1;
+      // flex-basis: 20%;
     }
 
     .minor__project--titleblock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      // flex-basis: auto;
+      flex-grow: 2;
+      padding: 0 0.3rem;
 
       .minor__project--title {
-
+        font-size: 1.2rem;
       }
 
-      .minor__project--link {
+      .minor__project--links {
 
+        .minor__project--link {
+
+          i {
+            margin-right: 0.2rem;
+          }
+        }
+  
+        .minor__project--github {
+
+          i {
+            margin-right: 0.2rem;
+            margin-left: 0.8rem;
+          }
+        }
       }
 
-      .minor__project--github {
+      
+    }
+  }
+}
 
+#skills {
+
+  .skills__list {
+    list-style: none;
+
+    .skills__item {
+
+      .fa-html5 {
+        color: #E34F26;
+      }
+
+      .fa-js {
+        color: #F0DB4F;
+      }
+
+      .fa-css3-alt {
+        color: #1E5FA9;
+      }
+
+      .fa-sass {
+        color: #C66395;
+      }
+
+      .fa-node {
+        color: #669F64;
+      }
+
+      .fa-react {
+        color: #00D8FF;
+      }
+
+      .fa-git {
+        color: #C13F21;
+      }
+
+      .fa-adobe {
+        color: #ED1B23;
+      }
+
+      .fa-gulp {
+        color: #CB4546;
+      }
+
+      .fa-npm {
+        color: #C53635;
+      }
+
+      .skills__img {
+        height: 50px;
       }
     }
+  }
+}
+
+#codepen {
+
+}
+
+#footer {
+
+  .social__links {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 2rem;
+    margin: 1rem auto;
+
+    .social__link {
+
+    }
+  }
+
+  .footer__email {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
   }
 }

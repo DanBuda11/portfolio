@@ -38,20 +38,21 @@
   </head>
   <header id="header">
     <img class="header__img" src="images/dan.jpg" alt="Dan Image" />
-    <a class="header__email" href="mailto:danbuda@gmail.com"
-      ><i class="fas fa-envelope"></i>
-
-      danbuda@gmail.com</a
-    >
+    <div class="header__textblock">
+      <h1 class="header__title">Dan Buda</h1>
+      <a class="header__email" href="mailto:danbuda@gmail.com">
+        danbuda@gmail.com</a
+      >
+    </div>
   </header>
   <section id="about">
-    Who I Am
-    <p>
+    <h2 class="section__title">Who I Am</h2>
+    <p class="about__blurb">
       Hi, I'm Dan. I like to make stuff. I especially like to make progressive
       and responsive web applications using current technologies with a focus on
       user experience and accessibility.
     </p>
-    <p>
+    <p class="about__blurb">
       I've been a financial adviser, a
       <a href="https://danbudahomes.com/">Realtor</a>, a real estate investor, a
       youth soccer coach, a legislative staffer, a
@@ -62,7 +63,7 @@
     </p>
   </section>
   <section id="major">
-    <h2 class="section__title">What I've Made</h2>
+    <h2 class="section__title right">What I've Made</h2>
     <div class="major__project">
       <div class="major__project--header">
         <img
@@ -75,12 +76,12 @@
           <a href="" class="major__project--link"
             ><i class="fas fa-link"></i>
 
-            Link to Project</a
+            Project Link</a
           >
           <a href="" class="major__project--github"
             ><i class="fab fa-github"></i>
 
-            GitHub Link</a
+            GitHub</a
           >
         </div>
         <img
@@ -120,12 +121,12 @@
           <a href="" class="major__project--link"
             ><i class="fas fa-link"></i>
 
-            Link to Project</a
+            Project Link</a
           >
           <a href="" class="major__project--github"
             ><i class="fab fa-github"></i>
 
-            GitHub Link</a
+            GitHub</a
           >
         </div>
         <img
@@ -163,12 +164,12 @@
           <a href="" class="major__project--link"
             ><i class="fas fa-link"></i>
 
-            Link to Project</a
+            Project Link</a
           >
           <a href="" class="major__project--github"
             ><i class="fab fa-github"></i>
 
-            GitHub Link</a
+            GitHub</a
           >
         </div>
         <img
@@ -198,58 +199,74 @@
   <section id="minor">
     <h2 class="section__title">What I've Also Made</h2>
     <div class="minor__project">
-      <img
-        src="https://picsum.photos/200/200"
-        alt=""
-        class="minor__project--image"
-      />
+      <img src="https://picsum.photos/200" alt="" class="minor__project--img" />
       <div class="minor__project--titleblock">
         <h4 class="minor__project--title">Gulp Framework</h4>
-        <a href="" class="minor__project--link"
-          ><i class="fas fa-link"></i>Link to Project</a
-        >
-        <a href="" class="minor__project--github"
-          ><i class="fab fa-github"></i>GitHub Link</a
-        >
+        <div class="minor__project--links">
+          <a href="" class="minor__project--link"
+            ><i class="fas fa-link"></i>Project Link</a
+          >
+          <a href="" class="minor__project--github"
+            ><i class="fab fa-github"></i>GitHub</a
+          >
+        </div>
       </div>
     </div>
     <div class="minor__project">
-      <img
-        src="https://picsum.photos/200/200"
-        alt=""
-        class="minor__project--image"
-      />
       <div class="minor__project--titleblock">
         <h4 class="minor__project--title">React Navbar</h4>
-        <a href="" class="minor__project--link"
-          ><i class="fas fa-link"></i>Link to Project</a
-        >
-        <a href="" class="minor__project--github"
-          ><i class="fab fa-github"></i>GitHub Link</a
-        >
+        <div class="minor__project--links">
+          <a href="" class="minor__project--link"
+            ><i class="fas fa-link"></i>Project Link</a
+          >
+          <a href="" class="minor__project--github"
+            ><i class="fab fa-github"></i>GitHub</a
+          >
+        </div>
       </div>
+      <img src="https://picsum.photos/200" alt="" class="minor__project--img" />
     </div>
     <div class="minor__project">
-      <img
-        src="https://picsum.photos/200/200"
-        alt=""
-        class="minor__project--image"
-      />
+      <img src="https://picsum.photos/200" alt="" class="minor__project--img" />
       <div class="minor__project--titleblock">
         <h4 class="minor__project--title">Webpack Framework</h4>
-        <a href="" class="minor__project--link"
-          ><i class="fas fa-link"></i>Link to Project</a
-        >
-        <a href="" class="minor__project--github"
-          ><i class="fab fa-github"></i>GitHub Link</a
-        >
+        <div class="minor__project--links">
+          <a href="" class="minor__project--link"
+            ><i class="fas fa-link"></i>Project Link</a
+          >
+          <a href="" class="minor__project--github"
+            ><i class="fab fa-github"></i>GitHub</a
+          >
+        </div>
       </div>
     </div>
   </section>
   <section id="skills">
-    <h2 class="section__title">What I Make Stuff With</h2>
+    <h2 class="section__title right">What I Use</h2>
+    <ul class="skills__list">
+      <li class="skills__item"><i class="fab fa-html5"></i>HTML</li>
+      <li class="skills__item"><i class="fab fa-css3-alt"></i>CSS</li>
+      <li class="skills__item"><i class="fab fa-sass"></i>Sass</li>
+      <li class="skills__item"><i class="fab fa-js"></i>JavaScript</li>
+      <li class="skills__item"><i class="fab fa-node"></i>NodeJS</li>
+      <li class="skills__item"><img class="skills__img" src="/images/jquery.svg" alt="jquery"></i>jQuery</li>
+      <li class="skills__item"><i class="fab fa-react"></i>React</li>
+      <li class="skills__item"><img class="skills__img" src="/images/express.png" alt="express"></img>Express</li>
+      <li class="skills__item"></i><svg class="skills__img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><defs><linearGradient id="0" x1="24.2" y1="47.593" x2="25.627" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#74cb32"/><stop offset="1" stop-color="#abeb6b"/></linearGradient></defs><circle r="24" cy="24" cx="24" fill="url(#0)"/><g transform="matrix(.05078 0 0 .05078 10 10)" fill="#283d16"><path d="m413.69 0c0 0-45.37 44.01-94.43 61.759-363.33 131.42-210.1 387.52-205.1 388.36 0 0 20.374-35.48 47.896-55.717 174.64-128.39 210.14-276.17 210.14-276.17 0 0-39.19 177.83-194.56 288.48-34.32 24.426-57.55 84.57-67.39 144.68 0 0 24.325-9.828 34.785-12.49 4.079-26.618 12.607-52.11 27.03-74.875 217.15 25.854 288.27-149.12 297.56-210.14 21.929-144.1-55.928-253.89-55.928-253.89"/></g></svg>MongoDB</li>
+      <li class="skills__item"><i class="fab fa-git"></i>Git</li>
+      <li class="skills__item"><i class="fab fa-adobe"></i>Photoshop</li>
+      <li class="skills__item">
+        <img
+          class="skills__img"
+          src="/images/webpack.svg"
+          alt="webpack"
+        />Webpack
+      </li>
+      <li class="skills__item"><i class="fab fa-gulp"></i>Gulp</li>
+      <li class="skills__item"><i class="fab fa-npm"></i>NPM</li>
+    </ul>
   </section>
-  <section id="codepen">
+  <!-- <section id="codepen">
     <h2 class="section__title">Where I Explain The Stuff I've Made</h2>
     <a href="https://codepen.io/danbuda/"
       ><i class="fab fa-codepen"></i>
@@ -261,24 +278,26 @@
 
       CodePen Posts</a
     >
-  </section>
+  </section> -->
   <footer id="footer">
-    <h2 class="section__title">Where I Can Be Found</h2>
-    <a href="https://www.linkedin.com/in/danbuda/"
-      ><i class="fab fa-linkedin-in"></i>
+    <h2 class="section__title">Where I Am</h2>
+    <div class="social__links">
+      <a href="https://codepen.io/danbuda/" class="social__link"
+        ><i class="fab fa-codepen"></i
+      ></a>
+      <a href="https://www.linkedin.com/in/danbuda/" class="social__link"
+        ><i class="fab fa-linkedin-in"></i
+      ></a>
+      <a href="https://twitter.com/danielbuda" class="social__link"
+        ><i class="fab fa-twitter"></i
+      ></a>
+      <a href="https://github.com/danbuda11" class="social__link"
+        ><i class="fab fa-github"></i
+      ></a>
+    </div>
 
-      LinkedIn</a
-    >
-    <a href="https://twitter.com/danielbuda"
-      ><i class="fab fa-twitter"></i>
-
-      Twitter</a
-    >
-    <a href="https://github.com/danbuda11"
-      ><i class="fab fa-github"></i>GitHub</a
-    >
-    <a href="mailto:danbuda@gmail.com"
-      ><i class="fas fa-envelope"></i>danbuda@gmail.com</a
+    <a href="mailto:danbuda@gmail.com" class="footer__email"
+      >danbuda@gmail.com</a
     >
   </footer>
   <body>
