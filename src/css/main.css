@@ -13,13 +13,22 @@ html {
   margin: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  box-shadow: 0px 0px 0px 0px #fc5185;
+  transition: box-shadow 0.3s linear; }
+
+a:hover {
+  box-shadow: 0px 2px var(--blue); }
 
 #about, #major, #minor, #skills, #codepen, #footer {
   padding: 2rem 1.2rem; }
 
+.header__wrap, .about__wrap, .major__wrap, .minor__wrap, .skills__wrap, .footer__wrap {
+  max-width: 800px;
+  margin: 0 auto; }
+
 .section__title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 1.6rem;
   border-bottom: 2px solid var(--yellow);
   display: inline-block; }
@@ -28,29 +37,29 @@ a {
   text-align: right; }
 
 #header {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
   background-color: var(--black);
   color: var(--white); }
-  #header .header__img {
-    height: 100px; }
-  #header .header__textblock {
+  #header .header__wrap {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly; }
-    #header .header__textblock .header__title {
-      margin: 0; }
-    #header .header__textblock .header__email {
-      color: var(--blue); }
+    justify-content: space-around;
+    padding: 2rem 1.2rem; }
+    #header .header__wrap .header__img {
+      height: 100px; }
+    #header .header__wrap .header__textblock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly; }
+      #header .header__wrap .header__textblock .header__title {
+        margin: 0; }
+      #header .header__wrap .header__textblock .header__email {
+        color: var(--blue); }
 
 #about {
   background-color: var(--black);
   color: var(--white); }
   #about .about__blurb {
     line-height: 1.5;
-    letter-spacing: 1px;
-    margin-bottom: 1.5rem; }
+    letter-spacing: 1px; }
     #about .about__blurb .about__blurb--link {
       color: var(--blue); }
     #about .about__blurb .about__name {
@@ -60,26 +69,28 @@ a {
 #major {
   background-color: var(--black);
   color: var(--white); }
-  #major .major__project .major__project--header {
-    display: flex;
-    justify-content: space-between; }
-    #major .major__project .major__project--header .major__project--desktop {
-      height: 100px; }
-    #major .major__project .major__project--header .major__project--titleblock {
+  #major .major__project {
+    margin: 0 auto; }
+    #major .major__project .major__project--header {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      text-align: center;
-      flex-grow: 2; }
-      #major .major__project .major__project--header .major__project--titleblock .major__project--link {
-        color: var(--blue); }
-      #major .major__project .major__project--header .major__project--titleblock .major__project--github {
-        color: var(--blue); }
-    #major .major__project .major__project--header .major__project--mobile {
-      height: 100px; }
-  #major .major__project .major__project--description {
-    line-height: 1.5;
-    letter-spacing: 1px; }
+      justify-content: space-between; }
+      #major .major__project .major__project--header .major__project--desktop {
+        height: 100px; }
+      #major .major__project .major__project--header .major__project--titleblock {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        flex-grow: 2; }
+        #major .major__project .major__project--header .major__project--titleblock .major__project--link {
+          color: var(--blue); }
+        #major .major__project .major__project--header .major__project--titleblock .major__project--github {
+          color: var(--blue); }
+      #major .major__project .major__project--header .major__project--mobile {
+        height: 100px; }
+    #major .major__project .major__project--description {
+      line-height: 1.5;
+      letter-spacing: 1px; }
 
 #minor {
   background-color: var(--black);
@@ -87,12 +98,11 @@ a {
   #minor .minor__flex {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
     margin: 0 auto; }
     #minor .minor__flex .minor__project {
       display: flex;
       justify-content: space-between;
-      margin: 4rem auto;
+      margin: 0 auto 3rem;
       max-width: 340px; }
       #minor .minor__flex .minor__project .minor__project--img {
         height: 100px;
@@ -118,63 +128,67 @@ a {
           #minor .minor__flex .minor__project .minor__project--titleblock .minor__project--links .minor__project--github i {
             margin-right: 0.2rem;
             margin-left: 0.8rem; }
+    #minor .minor__flex .minor__project:last-child {
+      margin-bottom: 0; }
 
 #skills {
   background-color: var(--black);
   color: var(--white); }
-  #skills .skills__list {
+  #skills .skills__wrap .skills__list {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 0; }
-    #skills .skills__list .skills__item {
+    #skills .skills__wrap .skills__list .skills__item {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin: 1rem 1rem;
+      margin: 1rem;
       align-items: center;
       justify-content: center; }
-      #skills .skills__list .skills__item i {
+      #skills .skills__wrap .skills__list .skills__item i {
         font-size: 50px; }
-      #skills .skills__list .skills__item .fa-html5 {
+      #skills .skills__wrap .skills__list .skills__item .fa-html5 {
         color: #E34F26; }
-      #skills .skills__list .skills__item .fa-js {
+      #skills .skills__wrap .skills__list .skills__item .fa-js {
         color: #F0DB4F; }
-      #skills .skills__list .skills__item .fa-css3-alt {
+      #skills .skills__wrap .skills__list .skills__item .fa-css3-alt {
         color: #1E5FA9; }
-      #skills .skills__list .skills__item .fa-sass {
+      #skills .skills__wrap .skills__list .skills__item .fa-sass {
         color: #C66395; }
-      #skills .skills__list .skills__item .fa-node {
+      #skills .skills__wrap .skills__list .skills__item .fa-node {
         color: #669F64; }
-      #skills .skills__list .skills__item .fa-react {
+      #skills .skills__wrap .skills__list .skills__item .fa-react {
         color: #00D8FF; }
-      #skills .skills__list .skills__item .fa-git {
+      #skills .skills__wrap .skills__list .skills__item .fa-git {
         color: #C13F21; }
-      #skills .skills__list .skills__item .fa-adobe {
+      #skills .skills__wrap .skills__list .skills__item .fa-adobe {
         color: #ED1B23; }
-      #skills .skills__list .skills__item .fa-gulp {
+      #skills .skills__wrap .skills__list .skills__item .fa-gulp {
         color: #CB4546; }
-      #skills .skills__list .skills__item .fa-npm {
+      #skills .skills__wrap .skills__list .skills__item .fa-npm {
         color: #C53635; }
-      #skills .skills__list .skills__item .skills__img {
+      #skills .skills__wrap .skills__list .skills__item .skills__img {
         height: 50px; }
-      #skills .skills__list .skills__item p {
+      #skills .skills__wrap .skills__list .skills__item p {
         padding-top: 0.5rem; }
+    #skills .skills__wrap .skills__list .skills__item:last-child {
+      margin-bottom: 0; }
 
 #footer {
   background-color: var(--black);
   color: var(--white); }
-  #footer .social__links {
+  #footer .footer__wrap .social__links {
     display: flex;
     justify-content: space-evenly;
     font-size: 2rem;
     padding: 1rem 0 2rem;
     max-width: 700px;
     margin: 0 auto; }
-    #footer .social__links .social__link {
+    #footer .footer__wrap .social__links .social__link {
       color: var(--blue); }
-  #footer .footer__email {
+  #footer .footer__wrap .footer__email {
     display: block;
     text-align: center;
     font-size: 1.2rem;

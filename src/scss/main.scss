@@ -17,6 +17,12 @@ html {
 
 a {
   text-decoration: none;
+  box-shadow: 0px 0px 0px 0px #fc5185;
+  transition: box-shadow 0.3s linear;
+}
+
+a:hover {
+  box-shadow: 0px 2px var(--blue);
 }
 
 #about, #major, #minor, #skills, #codepen, #footer {
@@ -24,8 +30,13 @@ a {
   padding: 2rem 1.2rem;
 }
 
+.header__wrap, .about__wrap, .major__wrap, .minor__wrap, .skills__wrap, .footer__wrap {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .section__title {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   font-size: 1.6rem;
   border-bottom: 2px solid var(--yellow);
   display: inline-block;
@@ -36,27 +47,30 @@ a {
 }
 
 #header {
-  display: flex;
-  justify-content: space-around;
-  padding: 10px;
   background-color: var(--black);
   color: var(--white);
 
-  .header__img {
-    height: 100px;
-  }
-
-  .header__textblock {
+  .header__wrap {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    padding: 2rem 1.2rem;
 
-    .header__title {
-      margin: 0;
+    .header__img {
+      height: 100px;
     }
 
-    .header__email {
-      color: var(--blue);
+    .header__textblock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+
+      .header__title {
+        margin: 0;
+      }
+
+      .header__email {
+        color: var(--blue);
+      }
     }
   }
 }
@@ -68,7 +82,7 @@ a {
   .about__blurb {
     line-height: 1.5;
     letter-spacing: 1px;
-    margin-bottom: 1.5rem;
+    // margin: 1rem 0;
 
     .about__blurb--link {
       color: var(--blue);
@@ -86,6 +100,7 @@ a {
   color: var(--white);
 
   .major__project {
+    margin: 0 auto;
 
     .major__project--header {
       display: flex;
@@ -135,13 +150,12 @@ a {
   .minor__flex {
     display: flex;
     flex-wrap: wrap;
-    max-width: 800px;
     margin: 0 auto;
 
     .minor__project {
       display: flex;
       justify-content: space-between;
-      margin: 4rem auto;
+      margin: 0 auto 3rem;
       max-width: 340px;
 
       .minor__project--img {
@@ -189,6 +203,10 @@ a {
         }
       }
     }
+
+    .minor__project:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -196,72 +214,79 @@ a {
   background-color: var(--black);
   color: var(--white);
 
-  .skills__list {
-    list-style: none;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    padding: 0;
+  .skills__wrap {
 
-    .skills__item {
+    .skills__list {
+      list-style: none;
       display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: 1rem 1rem;
-      align-items: center;
-      justify-content: center;
-      
-      i {
-        font-size: 50px;
-        // padding-bottom: 0.2rem;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      padding: 0;
+
+      .skills__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        align-items: center;
+        justify-content: center;
+        
+        i {
+          font-size: 50px;
+          // padding-bottom: 0.2rem;
+        }
+
+        .fa-html5 {
+          color: #E34F26;
+        }
+
+        .fa-js {
+          color: #F0DB4F;
+        }
+
+        .fa-css3-alt {
+          color: #1E5FA9;
+        }
+
+        .fa-sass {
+          color: #C66395;
+        }
+
+        .fa-node {
+          color: #669F64;
+        }
+
+        .fa-react {
+          color: #00D8FF;
+        }
+
+        .fa-git {
+          color: #C13F21;
+        }
+
+        .fa-adobe {
+          color: #ED1B23;
+        }
+
+        .fa-gulp {
+          color: #CB4546;
+        }
+
+        .fa-npm {
+          color: #C53635;
+        }
+
+        .skills__img {
+          height: 50px;
+        }
+
+        p {
+          padding-top: 0.5rem;
+        }
       }
 
-      .fa-html5 {
-        color: #E34F26;
-      }
-
-      .fa-js {
-        color: #F0DB4F;
-      }
-
-      .fa-css3-alt {
-        color: #1E5FA9;
-      }
-
-      .fa-sass {
-        color: #C66395;
-      }
-
-      .fa-node {
-        color: #669F64;
-      }
-
-      .fa-react {
-        color: #00D8FF;
-      }
-
-      .fa-git {
-        color: #C13F21;
-      }
-
-      .fa-adobe {
-        color: #ED1B23;
-      }
-
-      .fa-gulp {
-        color: #CB4546;
-      }
-
-      .fa-npm {
-        color: #C53635;
-      }
-
-      .skills__img {
-        height: 50px;
-      }
-
-      p {
-        padding-top: 0.5rem;
+      .skills__item:last-child {
+        margin-bottom: 0;
       }
     }
   }
@@ -271,24 +296,26 @@ a {
   background-color: var(--black);
   color: var(--white);
 
-  .social__links {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 2rem;
-    // margin: 1rem auto;
-    padding: 1rem 0 2rem;
-    max-width: 700px;
-    margin: 0 auto;
+  .footer__wrap {
+    .social__links {
+      display: flex;
+      justify-content: space-evenly;
+      font-size: 2rem;
+      // margin: 1rem auto;
+      padding: 1rem 0 2rem;
+      max-width: 700px;
+      margin: 0 auto;
 
-    .social__link {
+      .social__link {
+        color: var(--blue);
+      }
+    }
+
+    .footer__email {
+      display: block;
+      text-align: center;
+      font-size: 1.2rem;
       color: var(--blue);
     }
-  }
-
-  .footer__email {
-    display: block;
-    text-align: center;
-    font-size: 1.2rem;
-    color: var(--blue);
   }
 }
