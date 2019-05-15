@@ -1,3 +1,10 @@
+:root {
+  --black: #222;
+  --white: #eee;
+  --blue: #56cbf9;
+  --yellow: #ffc857;
+}
+
 html {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -13,12 +20,15 @@ a {
 }
 
 #about, #major, #minor, #skills, #codepen, #footer {
-  margin: 3rem 0;
-  padding: 0 15px;
+  // margin: 3rem 0;
+  padding: 2rem 1.2rem;
 }
 
 .section__title {
   margin-bottom: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--yellow);
+  display: inline-block;
 }
 
 .section__title.right {
@@ -29,6 +39,8 @@ a {
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  background-color: var(--black);
+  color: var(--white);
 
   .header__img {
     height: 100px;
@@ -44,18 +56,35 @@ a {
     }
 
     .header__email {
+      color: var(--blue);
     }
   }
 }
 
 #about {
+  background-color: var(--black);
+  color: var(--white);
 
   .about__blurb {
     line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem;
+
+    .about__blurb--link {
+      color: var(--blue);
+    }
+
+    .about__name {
+      color: var(--yellow);
+      font-weight: bold;
+    }
   }
 }
 
 #major {
+  background-color: var(--black);
+  color: var(--white);
+
   .major__project {
 
     .major__project--header {
@@ -78,11 +107,11 @@ a {
         }
 
         .major__project--link {
-
+          color: var(--blue);
         }
 
         .major__project--github {
-
+          color: var(--blue);
         }
       }
 
@@ -94,85 +123,97 @@ a {
 
     .major__project--description {
       line-height: 1.5;
-    }
-
-    .major__project--techblock {
-      display: flex;
-      justify-content: space-evenly;
-
-      .major__project--techitem {
-
-      }
+      letter-spacing: 1px;
     }
   }
 }
 
 #minor {
+  background-color: var(--black);
+  color: var(--white);
 
-  .minor__project {
+  .minor__flex {
     display: flex;
-    justify-content: space-between;
-    margin: 2rem 0;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
 
-    .minor__project--img {
-      height: 85px;
-      flex-grow: 1;
-      // flex-basis: 20%;
-    }
-
-    .minor__project--titleblock {
+    .minor__project {
       display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      text-align: center;
-      // flex-basis: auto;
-      flex-grow: 2;
-      padding: 0 0.3rem;
+      justify-content: space-between;
+      margin: 4rem auto;
+      max-width: 340px;
 
-      .minor__project--title {
-        font-size: 1.2rem;
+      .minor__project--img {
+        height: 100px;
+        width: 100px;
+        // flex-grow: 1;
+        // flex-basis: 20%;
       }
 
-      .minor__project--links {
+      .minor__project--titleblock {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        // flex-basis: auto;
+        // flex-grow: 2;
+        padding: 0 1rem;
+        flex: 1;
 
-        .minor__project--link {
-
-          i {
-            margin-right: 0.2rem;
-          }
+        .minor__project--title {
+          font-size: 1.2rem;
         }
-  
-        .minor__project--github {
 
-          i {
-            margin-right: 0.2rem;
-            margin-left: 0.8rem;
+        .minor__project--links {
+
+          .minor__project--link {
+            color: var(--blue);
+            display: inline-block;
+            margin: 0.5rem 0;
+
+            i {
+              margin-right: 0.2rem;
+            }
+          }
+    
+          .minor__project--github {
+            color: var(--blue);
+            display: inline-block;
+
+            i {
+              margin-right: 0.2rem;
+              margin-left: 0.8rem;
+            }
           }
         }
       }
-
-      
     }
   }
 }
 
 #skills {
+  background-color: var(--black);
+  color: var(--white);
 
   .skills__list {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    padding: 0;
 
     .skills__item {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 1rem 1rem;
+      align-items: center;
+      justify-content: center;
       
       i {
         font-size: 50px;
-        padding-bottom: 0.2rem;
+        // padding-bottom: 0.2rem;
       }
 
       .fa-html5 {
@@ -220,32 +261,34 @@ a {
       }
 
       p {
-
+        padding-top: 0.5rem;
       }
     }
   }
 }
 
-#codepen {
-
-}
-
 #footer {
+  background-color: var(--black);
+  color: var(--white);
 
   .social__links {
     display: flex;
     justify-content: space-evenly;
     font-size: 2rem;
-    margin: 1rem auto;
+    // margin: 1rem auto;
+    padding: 1rem 0 2rem;
+    max-width: 700px;
+    margin: 0 auto;
 
     .social__link {
-
+      color: var(--blue);
     }
   }
 
   .footer__email {
     display: block;
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    color: var(--blue);
   }
 }

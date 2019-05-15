@@ -1,3 +1,9 @@
+:root {
+  --black: #222;
+  --white: #eee;
+  --blue: #56cbf9;
+  --yellow: #ffc857; }
+
 html {
   box-sizing: border-box;
   font-family: sans-serif; }
@@ -10,11 +16,13 @@ a {
   text-decoration: none; }
 
 #about, #major, #minor, #skills, #codepen, #footer {
-  margin: 3rem 0;
-  padding: 0 15px; }
+  padding: 2rem 1.2rem; }
 
 .section__title {
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--yellow);
+  display: inline-block; }
 
 .section__title.right {
   text-align: right; }
@@ -22,7 +30,9 @@ a {
 #header {
   display: flex;
   justify-content: space-around;
-  padding: 10px; }
+  padding: 10px;
+  background-color: var(--black);
+  color: var(--white); }
   #header .header__img {
     height: 100px; }
   #header .header__textblock {
@@ -31,96 +41,141 @@ a {
     justify-content: space-evenly; }
     #header .header__textblock .header__title {
       margin: 0; }
+    #header .header__textblock .header__email {
+      color: var(--blue); }
 
-#about .about__blurb {
-  line-height: 1.5; }
+#about {
+  background-color: var(--black);
+  color: var(--white); }
+  #about .about__blurb {
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem; }
+    #about .about__blurb .about__blurb--link {
+      color: var(--blue); }
+    #about .about__blurb .about__name {
+      color: var(--yellow);
+      font-weight: bold; }
 
-#major .major__project .major__project--header {
-  display: flex;
-  justify-content: space-between; }
-  #major .major__project .major__project--header .major__project--desktop {
-    height: 100px; }
-  #major .major__project .major__project--header .major__project--titleblock {
+#major {
+  background-color: var(--black);
+  color: var(--white); }
+  #major .major__project .major__project--header {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; }
+    #major .major__project .major__project--header .major__project--desktop {
+      height: 100px; }
+    #major .major__project .major__project--header .major__project--titleblock {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      text-align: center;
+      flex-grow: 2; }
+      #major .major__project .major__project--header .major__project--titleblock .major__project--link {
+        color: var(--blue); }
+      #major .major__project .major__project--header .major__project--titleblock .major__project--github {
+        color: var(--blue); }
+    #major .major__project .major__project--header .major__project--mobile {
+      height: 100px; }
+  #major .major__project .major__project--description {
+    line-height: 1.5;
+    letter-spacing: 1px; }
+
+#minor {
+  background-color: var(--black);
+  color: var(--white); }
+  #minor .minor__flex {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto; }
+    #minor .minor__flex .minor__project {
+      display: flex;
+      justify-content: space-between;
+      margin: 4rem auto;
+      max-width: 340px; }
+      #minor .minor__flex .minor__project .minor__project--img {
+        height: 100px;
+        width: 100px; }
+      #minor .minor__flex .minor__project .minor__project--titleblock {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        padding: 0 1rem;
+        flex: 1; }
+        #minor .minor__flex .minor__project .minor__project--titleblock .minor__project--title {
+          font-size: 1.2rem; }
+        #minor .minor__flex .minor__project .minor__project--titleblock .minor__project--links .minor__project--link {
+          color: var(--blue);
+          display: inline-block;
+          margin: 0.5rem 0; }
+          #minor .minor__flex .minor__project .minor__project--titleblock .minor__project--links .minor__project--link i {
+            margin-right: 0.2rem; }
+        #minor .minor__flex .minor__project .minor__project--titleblock .minor__project--links .minor__project--github {
+          color: var(--blue);
+          display: inline-block; }
+          #minor .minor__flex .minor__project .minor__project--titleblock .minor__project--links .minor__project--github i {
+            margin-right: 0.2rem;
+            margin-left: 0.8rem; }
+
+#skills {
+  background-color: var(--black);
+  color: var(--white); }
+  #skills .skills__list {
+    list-style: none;
+    display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
-    text-align: center;
-    flex-grow: 2; }
-  #major .major__project .major__project--header .major__project--mobile {
-    height: 100px; }
+    padding: 0; }
+    #skills .skills__list .skills__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem 1rem;
+      align-items: center;
+      justify-content: center; }
+      #skills .skills__list .skills__item i {
+        font-size: 50px; }
+      #skills .skills__list .skills__item .fa-html5 {
+        color: #E34F26; }
+      #skills .skills__list .skills__item .fa-js {
+        color: #F0DB4F; }
+      #skills .skills__list .skills__item .fa-css3-alt {
+        color: #1E5FA9; }
+      #skills .skills__list .skills__item .fa-sass {
+        color: #C66395; }
+      #skills .skills__list .skills__item .fa-node {
+        color: #669F64; }
+      #skills .skills__list .skills__item .fa-react {
+        color: #00D8FF; }
+      #skills .skills__list .skills__item .fa-git {
+        color: #C13F21; }
+      #skills .skills__list .skills__item .fa-adobe {
+        color: #ED1B23; }
+      #skills .skills__list .skills__item .fa-gulp {
+        color: #CB4546; }
+      #skills .skills__list .skills__item .fa-npm {
+        color: #C53635; }
+      #skills .skills__list .skills__item .skills__img {
+        height: 50px; }
+      #skills .skills__list .skills__item p {
+        padding-top: 0.5rem; }
 
-#major .major__project .major__project--description {
-  line-height: 1.5; }
-
-#major .major__project .major__project--techblock {
-  display: flex;
-  justify-content: space-evenly; }
-
-#minor .minor__project {
-  display: flex;
-  justify-content: space-between;
-  margin: 2rem 0; }
-  #minor .minor__project .minor__project--img {
-    height: 85px;
-    flex-grow: 1; }
-  #minor .minor__project .minor__project--titleblock {
+#footer {
+  background-color: var(--black);
+  color: var(--white); }
+  #footer .social__links {
     display: flex;
-    flex-direction: column;
     justify-content: space-evenly;
+    font-size: 2rem;
+    padding: 1rem 0 2rem;
+    max-width: 700px;
+    margin: 0 auto; }
+    #footer .social__links .social__link {
+      color: var(--blue); }
+  #footer .footer__email {
+    display: block;
     text-align: center;
-    flex-grow: 2;
-    padding: 0 0.3rem; }
-    #minor .minor__project .minor__project--titleblock .minor__project--title {
-      font-size: 1.2rem; }
-    #minor .minor__project .minor__project--titleblock .minor__project--links .minor__project--link i {
-      margin-right: 0.2rem; }
-    #minor .minor__project .minor__project--titleblock .minor__project--links .minor__project--github i {
-      margin-right: 0.2rem;
-      margin-left: 0.8rem; }
-
-#skills .skills__list {
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly; }
-  #skills .skills__list .skills__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 1rem 1rem; }
-    #skills .skills__list .skills__item i {
-      font-size: 50px;
-      padding-bottom: 0.2rem; }
-    #skills .skills__list .skills__item .fa-html5 {
-      color: #E34F26; }
-    #skills .skills__list .skills__item .fa-js {
-      color: #F0DB4F; }
-    #skills .skills__list .skills__item .fa-css3-alt {
-      color: #1E5FA9; }
-    #skills .skills__list .skills__item .fa-sass {
-      color: #C66395; }
-    #skills .skills__list .skills__item .fa-node {
-      color: #669F64; }
-    #skills .skills__list .skills__item .fa-react {
-      color: #00D8FF; }
-    #skills .skills__list .skills__item .fa-git {
-      color: #C13F21; }
-    #skills .skills__list .skills__item .fa-adobe {
-      color: #ED1B23; }
-    #skills .skills__list .skills__item .fa-gulp {
-      color: #CB4546; }
-    #skills .skills__list .skills__item .fa-npm {
-      color: #C53635; }
-    #skills .skills__list .skills__item .skills__img {
-      height: 50px; }
-
-#footer .social__links {
-  display: flex;
-  justify-content: space-evenly;
-  font-size: 2rem;
-  margin: 1rem auto; }
-
-#footer .footer__email {
-  display: block;
-  text-align: center;
-  font-size: 1.3rem; }
+    font-size: 1.2rem;
+    color: var(--blue); }
