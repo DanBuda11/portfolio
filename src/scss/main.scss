@@ -160,8 +160,20 @@ a {
 
   .skills__list {
     list-style: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 
     .skills__item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 1rem 1rem;
+      
+      i {
+        font-size: 50px;
+        padding-bottom: 0.2rem;
+      }
 
       .fa-html5 {
         color: #E34F26;
@@ -205,6 +217,10 @@ a {
 
       .skills__img {
         height: 50px;
+      }
+
+      p {
+
       }
     }
   }

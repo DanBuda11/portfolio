@@ -79,29 +79,40 @@ a {
       margin-left: 0.8rem; }
 
 #skills .skills__list {
-  list-style: none; }
-  #skills .skills__list .skills__item .fa-html5 {
-    color: #E34F26; }
-  #skills .skills__list .skills__item .fa-js {
-    color: #F0DB4F; }
-  #skills .skills__list .skills__item .fa-css3-alt {
-    color: #1E5FA9; }
-  #skills .skills__list .skills__item .fa-sass {
-    color: #C66395; }
-  #skills .skills__list .skills__item .fa-node {
-    color: #669F64; }
-  #skills .skills__list .skills__item .fa-react {
-    color: #00D8FF; }
-  #skills .skills__list .skills__item .fa-git {
-    color: #C13F21; }
-  #skills .skills__list .skills__item .fa-adobe {
-    color: #ED1B23; }
-  #skills .skills__list .skills__item .fa-gulp {
-    color: #CB4546; }
-  #skills .skills__list .skills__item .fa-npm {
-    color: #C53635; }
-  #skills .skills__list .skills__item .skills__img {
-    height: 50px; }
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly; }
+  #skills .skills__list .skills__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 1rem; }
+    #skills .skills__list .skills__item i {
+      font-size: 50px;
+      padding-bottom: 0.2rem; }
+    #skills .skills__list .skills__item .fa-html5 {
+      color: #E34F26; }
+    #skills .skills__list .skills__item .fa-js {
+      color: #F0DB4F; }
+    #skills .skills__list .skills__item .fa-css3-alt {
+      color: #1E5FA9; }
+    #skills .skills__list .skills__item .fa-sass {
+      color: #C66395; }
+    #skills .skills__list .skills__item .fa-node {
+      color: #669F64; }
+    #skills .skills__list .skills__item .fa-react {
+      color: #00D8FF; }
+    #skills .skills__list .skills__item .fa-git {
+      color: #C13F21; }
+    #skills .skills__list .skills__item .fa-adobe {
+      color: #ED1B23; }
+    #skills .skills__list .skills__item .fa-gulp {
+      color: #CB4546; }
+    #skills .skills__list .skills__item .fa-npm {
+      color: #C53635; }
+    #skills .skills__list .skills__item .skills__img {
+      height: 50px; }
 
 #footer .social__links {
   display: flex;
