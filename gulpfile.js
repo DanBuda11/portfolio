@@ -38,9 +38,11 @@ const paths = {
   devJS: 'src/js/*.js',
   devImages: 'src/images/*.{png,gif,jpg,jpeg.svg}',
   devFavicons: 'src/*.{ico,png,xml,svg,webmanifest}',
+  devDocs: 'src/docs/*.pdf',
   prodCSS: 'dist/css',
   prodJS: 'dist/js',
   prodImages: 'dist/images',
+  prodDocs: 'dist/docs'
 };
 
 // ************************* Development Tasks *************************
@@ -117,6 +119,11 @@ function buildJS() {
     .pipe(dest(paths.prodJS));
 }
 
+function buildDocs() {
+  return src(paths.devDocs)
+    .pipe(dest(paths.prodDocs))
+}
+
 // Minimize images
 function buildImages() {
   return src(paths.devImages)
@@ -134,5 +141,5 @@ exports.clean = clean;
 // Run gulp build to run production build
 exports.build = series(
   clean,
-  parallel(buildHTML, buildFavicon, buildCSS, buildJS, buildImages)
+  parallel(buildHTML, buildFavicon, buildCSS, buildJS, buildImages, buildDocs)
 );

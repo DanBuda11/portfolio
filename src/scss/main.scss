@@ -18,7 +18,7 @@
 
 html {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 *, *:before, *:after {
@@ -71,6 +71,7 @@ a:hover {
 
     .header__img {
       height: 110px;
+      border-radius: 5px;
 
       @media (min-width: 350px) {
         height: 125px;
@@ -203,6 +204,7 @@ a:hover {
         height: 100px;
         width: 100px;
         margin-right: 1.2rem;
+        border-radius: 5px;
       }
 
       .minor__project--text {

@@ -16,7 +16,7 @@
 
 html {
   box-sizing: border-box;
-  font-family: sans-serif; }
+  font-family: 'Roboto', sans-serif; }
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -57,7 +57,8 @@ a:hover {
       #header .header__wrap {
         justify-content: space-around; } }
     #header .header__wrap .header__img {
-      height: 110px; }
+      height: 110px;
+      border-radius: 5px; }
       @media (min-width: 350px) {
         #header .header__wrap .header__img {
           height: 125px; } }
@@ -142,7 +143,8 @@ a:hover {
       #minor .minor__flex .minor__project .minor__project--img {
         height: 100px;
         width: 100px;
-        margin-right: 1.2rem; }
+        margin-right: 1.2rem;
+        border-radius: 5px; }
       #minor .minor__flex .minor__project .minor__project--text {
         display: flex;
         flex-direction: column;
