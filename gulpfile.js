@@ -37,7 +37,7 @@ const paths = {
   devSCSS: 'src/scss/*.scss',
   devJS: 'src/js/*.js',
   devImages: 'src/images/*.{png,gif,jpg,jpeg,svg}',
-  devFavicons: 'src/*.{ico,png,xml,svg,webmanifest}',
+  devFavicons: 'src/*.{ico,png,xml,svg,webmanifest}*',
   devDocs: 'src/docs/*.pdf',
   prodCSS: 'dist/css',
   prodJS: 'dist/js',
@@ -109,7 +109,10 @@ function buildCSS() {
 
 // Move normalize.css from src/css to dist/css
 function buildNormalize() {
-  return src(paths.normalize).pipe(dest(paths.prodCSS));
+  return src(paths.normalize)
+    .pipe(cleanCSS())
+    .pipe(size({ showFiles: true }))
+    .pipe(dest(paths.prodCSS));
 }
 
 // Minimize JavaScript files

@@ -109,7 +109,8 @@ a:hover {
       width: 100%;
       margin: 0 auto 1rem;
       max-width: 500px;
-      display: block; }
+      display: block;
+      border-radius: 4px; }
     #major .major__project .major__right {
       display: flex;
       margin: 0 auto 1rem;
@@ -124,7 +125,8 @@ a:hover {
           margin: 0.7rem 0;
           color: var(--blue); }
       #major .major__project .major__right .major__img--small {
-        height: 175px; }
+        height: 175px;
+        border-radius: 4px; }
     #major .major__project .major__description {
       margin: 0 auto 3rem;
       line-height: 1.5;
