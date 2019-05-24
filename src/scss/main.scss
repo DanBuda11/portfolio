@@ -132,89 +132,48 @@ a:hover {
   background-color: var(--black);
   color: var(--white);
 
-  .test {
+  .major__project {
+    margin: 2rem;
 
-    .test__title {
+    .major__project--title {
       text-align: center;
       margin-bottom: 1rem;
     }
 
-    .test__img--big {
+    .major__img--big {
       width: 100%;
       margin: 0 auto 1rem;
       max-width: 500px;
       display: block;
     }
 
-    .test__right {
+    .major__right {
       display: flex;
       margin: 0 auto 1rem;
       justify-content: space-evenly;
       max-width: 480px;
 
-      .test__links {
+      .major__right--links {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        // @media (min-width: 700px) {
-        //   flex-direction: row;
-        //   justify-content: space-evenly;
-        //   flex-basis: 80%;
-        // }
-
-        a {
+        .major__right--link {
           margin: 0.7rem 0;
           color: var(--blue);
         }
       }
 
-      .test__img--small {
+      .major__img--small {
         height: 175px;
       }
     }
 
-    .test__description {
+    .major__description {
       margin: 0 auto 3rem;
       line-height: 1.5;
       max-width: 650px;
-    }
-  }
-
-  .major__project {
-    margin: 0 auto;
-
-    .major__project--header {
-      display: flex;
-      justify-content: space-between;
-
-      .major__project--desktop, .major__project--mobile {
-        height: 100px;
-        border-radius: 4px;
-      }
-
-      .major__project--titleblock {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        text-align: center;
-        flex-grow: 2;
-
-        .major__project--link {
-          color: var(--blue);
-        }
-
-        .major__project--github {
-          color: var(--blue);
-        }
-      }
-    }
-
-    .major__project--description {
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.5;
 
       .tech {
         color: var(--yellow);

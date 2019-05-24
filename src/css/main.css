@@ -100,56 +100,36 @@ a:hover {
 #major {
   background-color: var(--black);
   color: var(--white); }
-  #major .test .test__title {
-    text-align: center;
-    margin-bottom: 1rem; }
-  #major .test .test__img--big {
-    width: 100%;
-    margin: 0 auto 1rem;
-    max-width: 500px;
-    display: block; }
-  #major .test .test__right {
-    display: flex;
-    margin: 0 auto 1rem;
-    justify-content: space-evenly;
-    max-width: 480px; }
-    #major .test .test__right .test__links {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center; }
-      #major .test .test__right .test__links a {
-        margin: 0.7rem 0;
-        color: var(--blue); }
-    #major .test .test__right .test__img--small {
-      height: 175px; }
-  #major .test .test__description {
-    margin: 0 auto 3rem;
-    line-height: 1.5;
-    max-width: 650px; }
   #major .major__project {
-    margin: 0 auto; }
-    #major .major__project .major__project--header {
+    margin: 2rem; }
+    #major .major__project .major__project--title {
+      text-align: center;
+      margin-bottom: 1rem; }
+    #major .major__project .major__img--big {
+      width: 100%;
+      margin: 0 auto 1rem;
+      max-width: 500px;
+      display: block; }
+    #major .major__project .major__right {
       display: flex;
-      justify-content: space-between; }
-      #major .major__project .major__project--header .major__project--desktop, #major .major__project .major__project--header .major__project--mobile {
-        height: 100px;
-        border-radius: 4px; }
-      #major .major__project .major__project--header .major__project--titleblock {
+      margin: 0 auto 1rem;
+      justify-content: space-evenly;
+      max-width: 480px; }
+      #major .major__project .major__right .major__right--links {
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
-        text-align: center;
-        flex-grow: 2; }
-        #major .major__project .major__project--header .major__project--titleblock .major__project--link {
+        justify-content: center;
+        align-items: center; }
+        #major .major__project .major__right .major__right--links .major__right--link {
+          margin: 0.7rem 0;
           color: var(--blue); }
-        #major .major__project .major__project--header .major__project--titleblock .major__project--github {
-          color: var(--blue); }
-    #major .major__project .major__project--description {
-      max-width: 650px;
-      margin: 0 auto;
-      line-height: 1.5; }
-      #major .major__project .major__project--description .tech {
+      #major .major__project .major__right .major__img--small {
+        height: 175px; }
+    #major .major__project .major__description {
+      margin: 0 auto 3rem;
+      line-height: 1.5;
+      max-width: 650px; }
+      #major .major__project .major__description .tech {
         color: var(--yellow); }
 
 #minor {

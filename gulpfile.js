@@ -36,13 +36,14 @@ const paths = {
   devCSS: 'src/css',
   devSCSS: 'src/scss/*.scss',
   devJS: 'src/js/*.js',
-  devImages: 'src/images/*.{png,gif,jpg,jpeg.svg}',
+  devImages: 'src/images/*.{png,gif,jpg,jpeg,svg}',
   devFavicons: 'src/*.{ico,png,xml,svg,webmanifest}',
   devDocs: 'src/docs/*.pdf',
   prodCSS: 'dist/css',
   prodJS: 'dist/js',
   prodImages: 'dist/images',
-  prodDocs: 'dist/docs'
+  prodDocs: 'dist/docs',
+  normalize: 'src/css/normalize.css',
 };
 
 // ************************* Development Tasks *************************
@@ -106,6 +107,11 @@ function buildCSS() {
     .pipe(dest(paths.prodCSS));
 }
 
+// Move normalize.css from src/css to dist/css
+function buildNormalize() {
+  return src(paths.normalize).pipe(dest(paths.prodCSS));
+}
+
 // Minimize JavaScript files
 function buildJS() {
   return src(paths.devJS)
@@ -120,8 +126,7 @@ function buildJS() {
 }
 
 function buildDocs() {
-  return src(paths.devDocs)
-    .pipe(dest(paths.prodDocs))
+  return src(paths.devDocs).pipe(dest(paths.prodDocs));
 }
 
 // Minimize images
@@ -141,5 +146,13 @@ exports.clean = clean;
 // Run gulp build to run production build
 exports.build = series(
   clean,
-  parallel(buildHTML, buildFavicon, buildCSS, buildJS, buildImages, buildDocs)
+  parallel(
+    buildHTML,
+    buildFavicon,
+    buildCSS,
+    buildNormalize,
+    buildJS,
+    buildImages,
+    buildDocs
+  )
 );
