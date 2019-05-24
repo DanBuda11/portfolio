@@ -16,7 +16,11 @@
 
 html {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1px; }
+
+body {
+  background: var(--black); }
 
 *, *:before, *:after {
   box-sizing: inherit;
@@ -33,7 +37,7 @@ a:hover {
 #about, #major, #minor, #skills, #codepen, #footer {
   padding: 2rem 1.2rem; }
 
-.header__wrap, .about__wrap, .major__wrap, .minor__wrap, .skills__wrap, .footer__wrap {
+.wrapper {
   max-width: 800px;
   margin: 0 auto; }
 
@@ -43,49 +47,50 @@ a:hover {
   border-bottom: 2px solid var(--yellow);
   display: inline-block; }
 
-.section__title.right {
-  text-align: right; }
-
 #header {
   background-color: var(--black);
-  color: var(--white); }
-  #header .header__wrap {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem 1.2rem; }
+  color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 1.2rem; }
+  @media (min-width: 350px) {
+    #header {
+      justify-content: space-around; } }
+  #header .header__img {
+    height: 110px;
+    border-radius: 4px; }
     @media (min-width: 350px) {
-      #header .header__wrap {
-        justify-content: space-around; } }
-    #header .header__wrap .header__img {
-      height: 110px;
-      border-radius: 5px; }
-      @media (min-width: 350px) {
-        #header .header__wrap .header__img {
-          height: 125px; } }
-    #header .header__wrap .header__textblock {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-evenly; }
-      #header .header__wrap .header__textblock .header__title {
-        margin: 0;
-        font-size: 2rem; }
-        @media (min-width: 350px) {
-          #header .header__wrap .header__textblock .header__title {
-            font-size: 2.5rem; } }
-      #header .header__wrap .header__textblock .header__email {
-        color: var(--blue);
-        align-self: center; }
-        @media (min-width: 350px) {
-          #header .header__wrap .header__textblock .header__email {
-            font-size: 1.1rem; } }
+      #header .header__img {
+        height: 125px; } }
+  #header .header__textblock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center; }
+    #header .header__textblock .header__title {
+      font-family: 'Permanent Marker', cursive;
+      margin: 0;
+      font-size: 2rem; }
+      @media (min-width: 380px) {
+        #header .header__textblock .header__title {
+          font-size: 2.5rem; } }
+      @media (min-width: 600px) {
+        #header .header__textblock .header__title {
+          font-size: 3.5rem; } }
+    #header .header__textblock .header__email {
+      color: var(--blue);
+      align-self: center; }
+      @media (min-width: 380px) {
+        #header .header__textblock .header__email {
+          font-size: 1.1rem; } }
 
 #about {
   background-color: var(--black);
   color: var(--white); }
   #about .about__blurb {
-    line-height: 1.5;
     max-width: 650px;
-    margin: 0 auto; }
+    margin: 0 auto;
+    line-height: 1.5; }
     #about .about__blurb .about__blurb--link {
       color: var(--blue); }
     #about .about__blurb .about__name {
@@ -100,8 +105,9 @@ a:hover {
     #major .major__project .major__project--header {
       display: flex;
       justify-content: space-between; }
-      #major .major__project .major__project--header .major__project--desktop {
-        height: 100px; }
+      #major .major__project .major__project--header .major__project--desktop, #major .major__project .major__project--header .major__project--mobile {
+        height: 100px;
+        border-radius: 4px; }
       #major .major__project .major__project--header .major__project--titleblock {
         display: flex;
         flex-direction: column;
@@ -112,18 +118,17 @@ a:hover {
           color: var(--blue); }
         #major .major__project .major__project--header .major__project--titleblock .major__project--github {
           color: var(--blue); }
-      #major .major__project .major__project--header .major__project--mobile {
-        height: 100px; }
     #major .major__project .major__project--description {
       max-width: 650px;
-      margin: 0 auto; }
+      margin: 0 auto;
+      line-height: 1.5; }
       #major .major__project .major__project--description .tech {
         color: var(--yellow); }
 
 #minor {
   background-color: var(--black);
   color: var(--white);
-  margin-bottom: -3rem; }
+  margin-bottom: -2rem; }
   #minor .minor__flex {
     max-width: 775px;
     margin: -2rem 0 1rem; }
@@ -136,15 +141,15 @@ a:hover {
       display: flex;
       justify-content: space-around;
       margin: 2rem auto;
-      max-width: 300px; }
+      max-width: 310px; }
       @media (min-width: 650px) {
         #minor .minor__flex .minor__project {
-          margin: 2rem 0; } }
+          margin: 2rem 1rem 1rem; } }
       #minor .minor__flex .minor__project .minor__project--img {
         height: 100px;
         width: 100px;
         margin-right: 1.2rem;
-        border-radius: 5px; }
+        border-radius: 4px; }
       #minor .minor__flex .minor__project .minor__project--text {
         display: flex;
         flex-direction: column;
@@ -161,60 +166,60 @@ a:hover {
 #skills {
   background-color: var(--black);
   color: var(--white); }
-  #skills .skills__wrap .skills__list {
+  #skills .skills__list {
     list-style: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 0;
     margin: -1rem 0; }
-    #skills .skills__wrap .skills__list .skills__item {
+    #skills .skills__list .skills__item {
       display: flex;
       flex-direction: column;
       align-items: center;
       margin: 1rem;
       align-items: center;
       justify-content: center; }
-      #skills .skills__wrap .skills__list .skills__item i {
+      #skills .skills__list .skills__item i {
         font-size: 50px; }
-      #skills .skills__wrap .skills__list .skills__item .fa-html5 {
+      #skills .skills__list .skills__item .fa-html5 {
         color: var(--html); }
-      #skills .skills__wrap .skills__list .skills__item .fa-css3-alt {
+      #skills .skills__list .skills__item .fa-css3-alt {
         color: var(--css); }
-      #skills .skills__wrap .skills__list .skills__item .fa-sass {
+      #skills .skills__list .skills__item .fa-sass {
         color: var(--sass); }
-      #skills .skills__wrap .skills__list .skills__item .fa-js {
+      #skills .skills__list .skills__item .fa-js {
         color: var(--js); }
-      #skills .skills__wrap .skills__list .skills__item .fa-react {
+      #skills .skills__list .skills__item .fa-react {
         color: var(--react); }
-      #skills .skills__wrap .skills__list .skills__item .fa-node {
+      #skills .skills__list .skills__item .fa-node {
         color: var(--node); }
-      #skills .skills__wrap .skills__list .skills__item .fa-gulp {
+      #skills .skills__list .skills__item .fa-gulp {
         color: var(--gulp); }
-      #skills .skills__wrap .skills__list .skills__item .fa-git {
+      #skills .skills__list .skills__item .fa-git {
         color: var(--git); }
-      #skills .skills__wrap .skills__list .skills__item .fa-npm {
+      #skills .skills__list .skills__item .fa-npm {
         color: var(--npm); }
-      #skills .skills__wrap .skills__list .skills__item .fa-adobe {
+      #skills .skills__list .skills__item .fa-adobe {
         color: var(--photoshop); }
-      #skills .skills__wrap .skills__list .skills__item .skills__img {
+      #skills .skills__list .skills__item .skills__img {
         height: 50px; }
-      #skills .skills__wrap .skills__list .skills__item p {
+      #skills .skills__list .skills__item p {
         padding-top: 0.5rem; }
 
 #footer {
   background-color: var(--black);
   color: var(--white); }
-  #footer .footer__wrap .footer__links {
+  #footer .footer__links {
     text-align: center; }
-    #footer .footer__wrap .footer__links .footer__social {
+    #footer .footer__links .footer__social {
       display: flex;
       justify-content: space-evenly;
       margin-bottom: 2rem; }
-      #footer .footer__wrap .footer__links .footer__social .footer__social--link {
+      #footer .footer__links .footer__social .footer__social--link {
         color: var(--blue);
         font-size: 2rem; }
-    #footer .footer__wrap .footer__links .footer__email {
+    #footer .footer__links .footer__email {
       color: var(--blue);
       font-size: 1.2rem;
       text-align: center;

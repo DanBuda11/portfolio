@@ -6,7 +6,7 @@
     <meta name="description" content="Dan Buda's Web Development Portfolio" />
     <meta property="og:title" content="Dan Buda's Web Development Portfolio" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="" />
+    <meta property="og:image" content="images/dan.jpg" />
     <meta property="og:url" content="https://danbuda.com" />
     <link
       rel="apple-touch-icon"
@@ -37,9 +37,10 @@
     <title>Dan Buda's Web Development Portfolio</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css" />
     <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      href="https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto:400,700&display=swap"
       rel="stylesheet"
     />
+
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
@@ -47,10 +48,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" type="text/css" href="css/main.css" />
-    <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id=UA-11111111-1"
+      src="https://www.googletagmanager.com/gtag/js?id=UA-71553810-1"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -59,12 +59,12 @@
       }
       gtag('js', new Date());
 
-      gtag('config', 'UA-11111111-1');
+      gtag('config', 'UA-71553810-1');
     </script>
   </head>
   <body>
-    <header id="header">
-      <div class="header__wrap">
+    <div class="wrapper">
+      <header id="header">
         <img class="header__img" src="images/dan.jpg" alt="Dan Image" />
         <div class="header__textblock">
           <h1 class="header__title">Dan Buda</h1>
@@ -72,34 +72,36 @@
             danbuda@gmail.com</a
           >
         </div>
-      </div>
-    </header>
-    <section id="about">
-      <div class="about__wrap">
+      </header>
+      <section id="about">
         <h2 class="section__title">Who I Am</h2>
         <p class="about__blurb">
           Hi, I'm <span class="about__name">Dan</span>. I like to make stuff. I
           especially like to make progressive and responsive web applications
-          using current technologies with a focus on user experience and
-          accessibility.
+          using current technologies with a focus on user experience, design,
+          and accessibility.
         </p>
         <br />
         <p class="about__blurb">
-          I've been a financial adviser, a
-          <a class="about__blurb--link" href="https://danbudahomes.com/"
+          In previous lives I've been a financial advisor, a
+          <a
+            class="about__blurb--link"
+            href="https://danbudahomes.com/"
+            target="_blank"
             >Realtor</a
           >, a real estate investor, a youth soccer coach, a legislative
           staffer, a
           <a
             class="about__blurb--link"
             href="https://ballotpedia.org/Daniel_Buda"
+            target="_blank"
             >candidate for public office</a
-          >, a scuba diver, and a bass player in a very amateur Metallica cover
-          band. And now I like to make stuff.
+          >, a scuba diver, a bass player in a very amateur Metallica cover
+          band, and a baby.
         </p>
         <br />
         <p class="about__blurb">
-          For more details on what I look like on paper, check out my
+          For the complete paper version of me, check out my
           <a
             class="about__blurb--link"
             target="_blank"
@@ -107,38 +109,39 @@
             >r&#233;sum&#233;</a
           >.
         </p>
-      </div>
-    </section>
-    <section id="major">
-      <div class="major__wrap">
-        <h2 class="section__title right">What I've Made</h2>
+      </section>
+      <section id="major">
+        <h2 class="section__title">What I've Made</h2>
         <div class="major__project">
           <div class="major__project--header">
             <img
-              src="https://picsum.photos/300/200"
+              src="images/home-finder-big.jpg"
               alt=""
               class="major__project--desktop"
             />
             <div class="major__project--titleblock">
               <h3 class="major__project--title">Home Finder</h3>
-              <a href="" class="major__project--link"
+              <a
+                href="http://home-finder-lite.herokuapp.com/"
+                class="major__project--link"
+                target="_blank"
                 ><i class="fas fa-link"></i>
 
                 Project Link</a
               >
-              <a href="" class="major__project--github"
-                ><i class="fab fa-github"></i>
-
-                GitHub</a
+              <a
+                href="https://github.com/DanBuda11/real-estate-app"
+                class="major__project--github"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
               >
             </div>
             <img
-              src="https://picsum.photos/200/300"
+              src="images/home-finder.jpg"
               alt=""
               class="major__project--mobile"
             />
           </div>
-
           <div class="major__project--description">
             Built with a <span class="tech">React</span> frontend,
             <span class="tech">Nodes.js</span> and
@@ -159,7 +162,7 @@
         <div class="major__project">
           <div class="major__project--header">
             <img
-              src="https://picsum.photos/300/200"
+              src="images/txlege-countdown-big.jpg"
               alt=""
               class="major__project--desktop"
             />
@@ -167,19 +170,21 @@
               <h3 class="major__project--title">
                 Texas Legislature Countdown Clock
               </h3>
-              <a href="" class="major__project--link"
-                ><i class="fas fa-link"></i>
-
-                Project Link</a
+              <a
+                href="https://txlege-countdown.netlify.com/"
+                class="major__project--link"
+                target="_blank"
+                ><i class="fas fa-link"></i> Project Link</a
               >
-              <a href="" class="major__project--github"
-                ><i class="fab fa-github"></i>
-
-                GitHub</a
+              <a
+                href="https://github.com/DanBuda11/session-countdown"
+                class="major__project--github"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
               >
             </div>
             <img
-              src="https://picsum.photos/200/300"
+              src="images/txlege-countdown.jpg"
               alt=""
               class="major__project--mobile"
             />
@@ -204,25 +209,27 @@
         <div class="major__project">
           <div class="major__project--header">
             <img
-              src="https://picsum.photos/300/200"
+              src="images/buda-fooda-big.jpg"
               alt=""
               class="major__project--desktop"
             />
             <div class="major__project--titleblock">
               <h3 class="major__project--title">Buda Fooda</h3>
-              <a href="" class="major__project--link"
-                ><i class="fas fa-link"></i>
-
-                Project Link</a
+              <a
+                href="https://buda-fooda.netlify.com/#/"
+                class="major__project--link"
+                target="_blank"
+                ><i class="fas fa-link"></i> Project Link</a
               >
-              <a href="" class="major__project--github"
-                ><i class="fab fa-github"></i>
-
-                GitHub</a
+              <a
+                href="https://github.com/DanBuda11/recipes"
+                class="major__project--github"
+                target="_blank"
+                ><i class="fab fa-github"></i> GitHub</a
               >
             </div>
             <img
-              src="https://picsum.photos/200/300"
+              src="images/buda-fooda.jpg"
               alt=""
               class="major__project--mobile"
             />
@@ -236,22 +243,17 @@
             <span class="tech">React Router</span>.
           </div>
         </div>
-      </div>
-    </section>
-    <section id="minor">
-      <div class="minor__wrap">
+      </section>
+      <section id="minor">
         <h2 class="section__title">What I've Also Made</h2>
         <div class="minor__flex">
           <div class="minor__project">
             <img src="/images/gulp.jpg" alt="" class="minor__project--img" />
             <div class="minor__project--text">
               <h4 class="minor__project--title">Gulp Framework</h4>
-
-              <!-- <a href="#" class="minor__project--link"
-                ><i class="fas fa-link"></i>Project Link</a
-              > -->
               <a
                 href="https://github.com/DanBuda11/gulp-framework"
+                target="_blank"
                 class="minor__project--link"
                 ><i class="fab fa-github"></i>GitHub</a
               >
@@ -264,11 +266,13 @@
 
               <a
                 href="http://reactnav-danbuda.surge.sh/"
+                target="_blank"
                 class="minor__project--link"
                 ><i class="fas fa-link"></i>Project Link</a
               >
               <a
                 href="https://github.com/DanBuda11/collapsable-nav"
+                target="_blank"
                 class="minor__project--link"
                 ><i class="fab fa-github"></i>GitHub</a
               >
@@ -278,23 +282,18 @@
             <img src="/images/webpack.jpg" alt="" class="minor__project--img" />
             <div class="minor__project--text">
               <h4 class="minor__project--title">Webpack Framework</h4>
-
-              <!-- <a href="#" class="minor__project--link"
-                ><i class="fas fa-link"></i>Project Link</a
-              > -->
               <a
                 href="https://github.com/DanBuda11/webpack4"
+                target="_blank"
                 class="minor__project--link"
                 ><i class="fab fa-github"></i>GitHub</a
               >
             </div>
           </div>
         </div>
-      </div>
-    </section>
-    <section id="skills">
-      <div class="skills__wrap">
-        <h2 class="section__title right">What I Use</h2>
+      </section>
+      <section id="skills">
+        <h2 class="section__title">What I Use</h2>
         <ul class="skills__list">
           <li class="skills__item">
             <i class="fab fa-html5"></i>
@@ -357,32 +356,39 @@
             <p>Photoshop</p>
           </li>
         </ul>
-      </div>
-    </section>
-    <footer id="footer">
-      <div class="footer__wrap">
+      </section>
+      <footer id="footer">
         <h2 class="section__title">Where I Am</h2>
         <div class="footer__links">
           <div class="footer__social">
-            <a href="https://codepen.io/danbuda/" class="footer__social--link"
+            <a
+              href="https://codepen.io/danbuda/"
+              class="footer__social--link"
+              target="_blank"
               ><i class="fab fa-codepen"></i
             ></a>
             <a
               href="https://www.linkedin.com/in/danbuda/"
+              target="_blank"
               class="footer__social--link"
               ><i class="fab fa-linkedin-in"></i
             ></a>
             <a
               href="https://stackoverflow.com/users/6580663/dan-buda"
+              target="_blank"
               class="footer__social--link"
               ><i class="fab fa-stack-overflow"></i
             ></a>
             <a
               href="https://twitter.com/danielbuda"
+              target="_blank"
               class="footer__social--link"
               ><i class="fab fa-twitter"></i
             ></a>
-            <a href="https://github.com/danbuda11" class="footer__social--link"
+            <a
+              href="https://github.com/danbuda11"
+              class="footer__social--link"
+              target="_blank"
               ><i class="fab fa-github"></i
             ></a>
           </div>
@@ -390,8 +396,7 @@
             >danbuda@gmail.com</a
           >
         </div>
-      </div>
-    </footer>
-    <script src="js/index.js"></script>
+      </footer>
+    </div>
   </body>
 </html>

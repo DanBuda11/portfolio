@@ -1,7 +1,13 @@
 # Dan Buda's Portfolio
 
-<kbd>![Image]()</kbd>
+<kbd>![Image](project.png)</kbd>
 
-The newest iteration of my development portfolio. Unliike my previous version, which was built with React and webpack and had different pages for projects and my tech skills, I wanted to focus this one on highlighting what I've built and what I've built stuff with in a very simple but well laid-out site with design at the forefront. So I ended up making this with a single HTML and a single CSS file, no JavaScript, and compiled with a relatively simple Gulp framework.
+The newest iteration of my development portfolio. Unlike my [previous version](https://github.com/DanBuda11/portfolio-old) which was a single page app built with React and webpack with different pages for projects and what I build stuff with, I wanted this version to be much simpler, focusing more on design.
 
-It's fully responsive, and takes accesibility into mind, using a lot of flexbox and a few @media queries where I felt necessary.
+This is made with one HTML file and one Sass file, on a simple [gulp framework I made](https://github.com/DanBuda11/gulp-framework) that compiles Sass to CSS, and minifies everything.
+
+It's fully responsive, and like everything I make, is tested for performance and accessibility using both the [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audits in Chrome developer tools and [axe](https://www.deque.com/axe/).
+
+The Sass/CSS part of the site includes a lot of Flexbox to handle layout and responsive design, a few `@media` queries where necessary, and the use of CSS custom properties to make it easier to change color schemes if desired.
+
+Feedback is always welcome!
