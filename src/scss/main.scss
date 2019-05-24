@@ -132,6 +132,56 @@ a:hover {
   background-color: var(--black);
   color: var(--white);
 
+  .test {
+
+    .test__title {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .test__img--big {
+      width: 100%;
+      margin: 0 auto 1rem;
+      max-width: 500px;
+      display: block;
+    }
+
+    .test__right {
+      display: flex;
+      margin: 0 auto 1rem;
+      justify-content: space-evenly;
+      max-width: 480px;
+
+      .test__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // @media (min-width: 700px) {
+        //   flex-direction: row;
+        //   justify-content: space-evenly;
+        //   flex-basis: 80%;
+        // }
+
+        a {
+          margin: 0.7rem 0;
+          color: var(--blue);
+        }
+      }
+
+      .test__img--small {
+        height: 175px;
+      }
+    }
+
+    .test__description {
+      margin: 0 auto 3rem;
+      line-height: 1.5;
+      max-width: 650px;
+    }
+  }
+
   .major__project {
     margin: 0 auto;
 
@@ -146,10 +196,10 @@ a:hover {
 
       .major__project--titleblock {
         display: flex;
-      flex-direction: column;
-      justify-content: space-evenly;
-      text-align: center;
-      flex-grow: 2;
+        flex-direction: column;
+        justify-content: space-evenly;
+        text-align: center;
+        flex-grow: 2;
 
         .major__project--link {
           color: var(--blue);
@@ -220,7 +270,7 @@ a:hover {
             align-self: flex-start;
 
           .fa-link, .fa-github {
-            margin-right: 0.5rem;
+            // margin-right: 0.5rem;
           }
         }
       }

@@ -100,6 +100,33 @@ a:hover {
 #major {
   background-color: var(--black);
   color: var(--white); }
+  #major .test .test__title {
+    text-align: center;
+    margin-bottom: 1rem; }
+  #major .test .test__img--big {
+    width: 100%;
+    margin: 0 auto 1rem;
+    max-width: 500px;
+    display: block; }
+  #major .test .test__right {
+    display: flex;
+    margin: 0 auto 1rem;
+    justify-content: space-evenly;
+    max-width: 480px; }
+    #major .test .test__right .test__links {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #major .test .test__right .test__links a {
+        margin: 0.7rem 0;
+        color: var(--blue); }
+    #major .test .test__right .test__img--small {
+      height: 175px; }
+  #major .test .test__description {
+    margin: 0 auto 3rem;
+    line-height: 1.5;
+    max-width: 650px; }
   #major .major__project {
     margin: 0 auto; }
     #major .major__project .major__project--header {
@@ -160,8 +187,6 @@ a:hover {
         #minor .minor__flex .minor__project .minor__project--text .minor__project--link {
           color: var(--blue);
           align-self: flex-start; }
-          #minor .minor__flex .minor__project .minor__project--text .minor__project--link .fa-link, #minor .minor__flex .minor__project .minor__project--text .minor__project--link .fa-github {
-            margin-right: 0.5rem; }
 
 #skills {
   background-color: var(--black);
