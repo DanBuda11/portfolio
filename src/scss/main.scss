@@ -4,6 +4,9 @@
   --blue: #6ec9ff;
   --yellow: #ffa833;
 
+  --themeBlue: #0453db;
+  --themeYellow: #ba2d0b;
+
   --html: #E34F26;
   --css: #1E5FA9;
   --sass: #C66395;
@@ -24,6 +27,7 @@ html {
 
 body {
   background: var(--black);
+  transition: all 0.5s ease;
 }
 
 *, *:before, *:after {
@@ -37,8 +41,50 @@ a {
   transition: box-shadow 0.3s linear;
 }
 
+a.light {
+  box-shadow: 0px 0px 0px 0px var(--themeBlue);
+}
+
 a:hover {
   box-shadow: 0px 2px var(--blue);
+}
+
+a:hover.light {
+  box-shadow: 0px 2px var(--themeBlue);
+}
+
+.themeBtn {
+  bottom: 20px;
+  right: 20px;
+  position: fixed;
+  padding: 0;
+  border: none;
+  color: var(--blue);
+  cursor: pointer;
+  outline: none;
+  background: transparent;
+  transition: 0.5s ease;
+}
+
+.themeBtn.light {
+  color: var(--themeBlue);
+}
+
+.themeBtn:hover {
+  transform: scale(1.2);
+}
+
+.fa-sun {
+  margin: 0;
+}
+
+.themeIcon {
+
+}
+
+body.light, #header.light, #about.light, #major.light, #minor.light, #skills.light, #footer.light {
+  background-color: var(--white);
+  color: var(--black);
 }
 
 #about, #major, #minor, #skills, #codepen, #footer {
@@ -55,6 +101,11 @@ a:hover {
   font-size: 1.6rem;
   border-bottom: 2px solid var(--yellow);
   display: inline-block;
+  transition: border-bottom 0.5s ease;
+}
+
+.section__title.light {
+  border-bottom: 2px solid var(--themeYellow);
 }
 
 #header {
@@ -63,6 +114,7 @@ a:hover {
   display: flex;
   justify-content: space-between;
   padding: 2rem 1.2rem;
+  transition: all 0.5s ease;
 
   @media (min-width: 350px) {
     justify-content: space-around;
@@ -100,10 +152,15 @@ a:hover {
     .header__email {
       color: var(--blue);
       align-self: center;
+      transition: all 0.5s ease;
 
       @media (min-width: 380px) {
         font-size: 1.1rem;
       }
+    }
+
+    .header__email.light {
+      color: var(--themeBlue);
     }
   }
 }
@@ -111,6 +168,7 @@ a:hover {
 #about {
   background-color: var(--black);
   color: var(--white);
+  transition: all 0.5s ease;
 
   .about__blurb {
     max-width: 650px;
@@ -119,11 +177,21 @@ a:hover {
 
     .about__blurb--link {
       color: var(--blue);
+      transition: all 0.5s ease;
+    }
+
+    .about__blurb--link.light {
+      color: var(--themeBlue);
     }
 
     .about__name {
       color: var(--yellow);
       font-weight: bold;
+      transition: all 0.5s ease;
+    }
+
+    .about__name.light {
+      color: var(--themeYellow);
     }
   }
 }
@@ -131,6 +199,7 @@ a:hover {
 #major {
   background-color: var(--black);
   color: var(--white);
+  transition: all 0.5s ease;
 
   .major__project {
     margin-bottom: 4rem;
@@ -164,6 +233,11 @@ a:hover {
         .major__right--link {
           margin: 0.7rem 0;
           color: var(--blue);
+          transition: all 0.5s ease;
+        }
+
+        .major__right--link.light {
+          color: var(--themeBlue);
         }
       }
 
@@ -180,6 +254,11 @@ a:hover {
 
       .tech {
         color: var(--yellow);
+        transition: all 0.5s ease;
+      }
+
+      .tech.light {
+        color: var(--themeYellow);
       }
     }
   }
@@ -193,6 +272,7 @@ a:hover {
   background-color: var(--black);
   color: var(--white);
   margin-bottom: -2rem;
+  transition: all 0.5s ease;
 
   .minor__flex {
     max-width: 775px;
@@ -234,10 +314,15 @@ a:hover {
         .minor__project--link {
             color: var(--blue);
             align-self: flex-start;
+            transition: all 0.5s ease;
 
           .fa-link, .fa-github {
             // margin-right: 0.5rem;
           }
+        }
+
+        .minor__project--link.light {
+          color: var(--themeBlue);
         }
       }
     }
@@ -247,6 +332,7 @@ a:hover {
 #skills {
   background-color: var(--black);
   color: var(--white);
+  transition: all 0.5s ease;
 
   .skills__list {
     list-style: none;
@@ -322,6 +408,7 @@ a:hover {
 #footer {
   background-color: var(--black);
   color: var(--white);
+  transition: all 0.5s ease;
 
   .footer__links {
     text-align: center;
@@ -334,6 +421,11 @@ a:hover {
       .footer__social--link {
         color: var(--blue);
         font-size: 2rem;
+        transition: all 0.5s ease;
+      }
+
+      .footer__social--link.light {
+        color: var(--themeBlue);
       }
     }
 
@@ -342,6 +434,11 @@ a:hover {
       font-size: 1.2rem;
       text-align: center;
       align-self: center;
+      transition: all 0.5s ease;
+    }
+
+    .footer__email.light {
+      color: var(--themeBlue);
     }
   }
 }
