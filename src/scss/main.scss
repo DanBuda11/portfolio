@@ -53,7 +53,7 @@ a:hover.light {
   box-shadow: 0px 2px var(--themeBlue);
 }
 
-.themeBtn {
+.theme__btn {
   bottom: 20px;
   right: 20px;
   position: fixed;
@@ -66,20 +66,16 @@ a:hover.light {
   transition: 0.5s ease;
 }
 
-.themeBtn.light {
+.theme__btn.light {
   color: var(--themeBlue);
 }
 
-.themeBtn:hover {
+.theme__btn:hover {
   transform: scale(1.2);
 }
 
-.fa-sun {
+.fa-sun, .fa-moon {
   margin: 0;
-}
-
-.themeIcon {
-
 }
 
 body.light, #header.light, #about.light, #major.light, #minor.light, #skills.light, #footer.light {
@@ -315,10 +311,6 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
             color: var(--blue);
             align-self: flex-start;
             transition: all 0.5s ease;
-
-          .fa-link, .fa-github {
-            // margin-right: 0.5rem;
-          }
         }
 
         .minor__project--link.light {

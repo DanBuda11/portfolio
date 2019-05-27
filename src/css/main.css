@@ -43,7 +43,7 @@ a:hover {
 a:hover.light {
   box-shadow: 0px 2px var(--themeBlue); }
 
-.themeBtn {
+.theme__btn {
   bottom: 20px;
   right: 20px;
   position: fixed;
@@ -55,13 +55,13 @@ a:hover.light {
   background: transparent;
   transition: 0.5s ease; }
 
-.themeBtn.light {
+.theme__btn.light {
   color: var(--themeBlue); }
 
-.themeBtn:hover {
+.theme__btn:hover {
   transform: scale(1.2); }
 
-.fa-sun {
+.fa-sun, .fa-moon {
   margin: 0; }
 
 body.light, #header.light, #about.light, #major.light, #minor.light, #skills.light, #footer.light {
