@@ -205,7 +205,7 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
       #minor .minor__flex {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly; } }
+        justify-content: center; } }
     #minor .minor__flex .minor__project {
       display: flex;
       justify-content: space-around;
