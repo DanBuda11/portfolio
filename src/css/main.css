@@ -198,39 +198,39 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
   color: var(--white);
   margin-bottom: -2rem;
   transition: all 0.5s ease; }
-  #minor .minor__flex {
+  #minor .minor__grid {
     max-width: 775px;
     margin: -2rem 0 1rem; }
     @media (min-width: 650px) {
-      #minor .minor__flex {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center; } }
-    #minor .minor__flex .minor__project {
+      #minor .minor__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin-left: 2rem; } }
+    #minor .minor__grid .minor__project {
       display: flex;
       justify-content: space-around;
       margin: 2rem auto;
       max-width: 310px; }
       @media (min-width: 650px) {
-        #minor .minor__flex .minor__project {
+        #minor .minor__grid .minor__project {
           margin: 2rem 1rem 1rem; } }
-      #minor .minor__flex .minor__project .minor__project--img {
+      #minor .minor__grid .minor__project .minor__project--img {
         height: 100px;
         width: 100px;
         margin-right: 1.2rem;
         border-radius: 4px; }
-      #minor .minor__flex .minor__project .minor__project--text {
+      #minor .minor__grid .minor__project .minor__project--text {
         display: flex;
         flex-direction: column;
         flex-grow: 1;
         justify-content: space-evenly; }
-        #minor .minor__flex .minor__project .minor__project--text .minor__project--title {
+        #minor .minor__grid .minor__project .minor__project--text .minor__project--title {
           font-size: 1.1rem; }
-        #minor .minor__flex .minor__project .minor__project--text .minor__project--link {
+        #minor .minor__grid .minor__project .minor__project--text .minor__project--link {
           color: var(--blue);
           align-self: flex-start;
           transition: all 0.5s ease; }
-        #minor .minor__flex .minor__project .minor__project--text .minor__project--link.light {
+        #minor .minor__grid .minor__project .minor__project--text .minor__project--link.light {
           color: var(--themeBlue); }
 
 #skills {

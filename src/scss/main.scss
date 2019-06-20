@@ -270,14 +270,14 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
   margin-bottom: -2rem;
   transition: all 0.5s ease;
 
-  .minor__flex {
+  .minor__grid {
     max-width: 775px;
     margin: -2rem 0 1rem;
 
     @media (min-width: 650px) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-left: 2rem;
     }
 
     .minor__project {
