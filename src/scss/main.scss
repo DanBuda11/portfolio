@@ -16,6 +16,8 @@
   --gulp: #CB4546;
   --git: #C13F21;
   --npm: #C53635;
+  --stylelint: #fff;
+  --stylelintlight: #000;
   --photoshop: #ED1B23;
 }
 
@@ -380,6 +382,15 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
 
       .fa-npm {
         color: var(--npm);
+      }
+
+      .stylelint {
+        fill: var(--stylelint);
+        transition: all 0.5s ease;
+      }
+
+      .stylelint.light {
+        fill: var(--stylelintlight);
       }
 
       .fa-adobe {

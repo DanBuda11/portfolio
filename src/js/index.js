@@ -4,11 +4,14 @@ const items = document.querySelectorAll(
 const itemsArray = Array.from(items);
 const btn = document.querySelector('.theme__btn');
 const icon = document.querySelector('.theme__icon');
+const stylelint = document.querySelector('.stylelint');
 
 btn.addEventListener('click', () => {
   itemsArray.forEach(item => {
     item.classList.toggle('light');
   });
+
+stylelint.classList.toggle('light');
 
   if (icon.classList.contains('fa-sun')) {
     icon.classList.remove('fa-sun');
