@@ -3,27 +3,25 @@
   --white: #eee;
   --blue: #6ec9ff;
   --yellow: #ffa833;
-
   --themeBlue: #0453db;
   --themeYellow: #ba2d0b;
-
-  --html: #E34F26;
-  --css: #1E5FA9;
-  --sass: #C66395;
-  --js: #F0DB4F;
-  --react: #00D8FF;
-  --node: #669F64;
-  --gulp: #CB4546;
-  --git: #C13F21;
-  --npm: #C53635;
+  --html: #e34f26;
+  --css: #1e5fa9;
+  --sass: #c66395;
+  --js: #f0db4f;
+  --react: #00d8ff;
+  --node: #669f64;
+  --gulp: #cb4546;
+  --git: #c13f21;
+  --npm: #c53635;
   --stylelint: #fff;
   --stylelintlight: #000;
-  --photoshop: #ED1B23;
+  --photoshop: #ed1b23;
 }
 
 html {
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
 }
 
@@ -32,27 +30,29 @@ body {
   transition: all 0.5s ease;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
   margin: 0;
 }
 
 a {
   text-decoration: none;
-  box-shadow: 0px 0px 0px 0px var(--blue);
+  box-shadow: 0 0 0 0 var(--blue);
   transition: box-shadow 0.3s linear;
 }
 
 a.light {
-  box-shadow: 0px 0px 0px 0px var(--themeBlue);
+  box-shadow: 0 0 0 0 var(--themeBlue);
 }
 
 a:hover {
-  box-shadow: 0px 2px var(--blue);
+  box-shadow: 0 2px var(--blue);
 }
 
 a:hover.light {
-  box-shadow: 0px 2px var(--themeBlue);
+  box-shadow: 0 2px var(--themeBlue);
 }
 
 .theme__btn {
@@ -76,16 +76,28 @@ a:hover.light {
   transform: scale(1.2);
 }
 
-.fa-sun, .fa-moon {
+.fa-sun,
+.fa-moon {
   margin: 0;
 }
 
-body.light, #header.light, #about.light, #major.light, #minor.light, #skills.light, #footer.light {
+body.light,
+#header.light,
+#about.light,
+#major.light,
+#minor.light,
+#skills.light,
+#footer.light {
   background-color: var(--white);
   color: var(--black);
 }
 
-#about, #major, #minor, #skills, #codepen, #footer {
+#about,
+#major,
+#minor,
+#skills,
+#codepen,
+#footer {
   padding: 2rem 1.2rem;
 }
 
@@ -134,7 +146,7 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
     align-items: center;
 
     .header__title {
-      font-family: 'Permanent Marker', cursive;
+      font-family: "Permanent Marker", cursive;
       margin: 0;
       font-size: 2rem;
 
@@ -310,9 +322,9 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
         }
 
         .minor__project--link {
-            color: var(--blue);
-            align-self: flex-start;
-            transition: all 0.5s ease;
+          color: var(--blue);
+          align-self: flex-start;
+          transition: all 0.5s ease;
         }
 
         .minor__project--link.light {
@@ -343,7 +355,7 @@ body.light, #header.light, #about.light, #major.light, #minor.light, #skills.lig
       margin: 1rem;
       align-items: center;
       justify-content: center;
-      
+
       i {
         font-size: 50px;
       }
