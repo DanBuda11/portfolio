@@ -133,10 +133,6 @@ function buildDocs() {
   return src(paths.devDocs).pipe(dest(paths.prodDocs));
 }
 
-function buildHeaders() {
-  return src('_headers').pipe(dest(paths.prodHeaders));
-}
-
 // Minimize images
 // function buildImages() {
 //   return src(paths.devImages)
@@ -162,6 +158,5 @@ exports.build = series(
     buildJS,
     // buildImages,
     buildDocs,
-    buildHeaders
   )
 );
