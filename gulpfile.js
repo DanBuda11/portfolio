@@ -133,12 +133,12 @@ function buildDocs() {
 }
 
 // Minimize images
-function buildImages() {
-  return src(paths.devImages)
-    .pipe(imagemin())
-    .pipe(size({ showFiles: true }))
-    .pipe(dest(paths.prodImages));
-}
+// function buildImages() {
+//   return src(paths.devImages)
+//     .pipe(imagemin())
+//     .pipe(size({ showFiles: true }))
+//     .pipe(dest(paths.prodImages));
+// }
 
 // ************************* Exported Tasks *************************
 
@@ -155,7 +155,7 @@ exports.build = series(
     buildCSS,
     buildNormalize,
     buildJS,
-    buildImages,
+    // buildImages,
     buildDocs
   )
 );
