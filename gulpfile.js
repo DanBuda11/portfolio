@@ -44,6 +44,7 @@ const paths = {
   prodImages: 'dist/images',
   prodDocs: 'dist/docs',
   normalize: 'src/css/normalize.css',
+  prodHeaders: 'dist'
 };
 
 // ************************* Development Tasks *************************
@@ -132,6 +133,10 @@ function buildDocs() {
   return src(paths.devDocs).pipe(dest(paths.prodDocs));
 }
 
+function buildHeaders() {
+  return src('_headers').pipe(dest(paths.prodHeaders));
+}
+
 // Minimize images
 // function buildImages() {
 //   return src(paths.devImages)
@@ -156,6 +161,7 @@ exports.build = series(
     buildNormalize,
     buildJS,
     // buildImages,
-    buildDocs
+    buildDocs,
+    buildHeaders
   )
 );
