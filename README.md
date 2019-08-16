@@ -4,7 +4,7 @@
 
 The newest iteration of my development portfolio. Unlike my [previous version](https://github.com/DanBuda11/portfolio-old) which was a single page app built with React and webpack with different pages for projects and what I build stuff with, I wanted this version to be much simpler, focusing more on design.
 
-This is made with one HTML file and one Sass file, on a simple [gulp framework I made](https://github.com/DanBuda11/gulp-framework) that compiles Sass to CSS, and minifies everything.
+This is made with one HTML file and one Sass file, on a simple [gulp framework I made](https://github.com/DanBuda11/gulp-framework) that compiles Sass to CSS, and minifies everything. [Cloudinary](https://cloudinary.com/) is used to handle images.
 
 It's fully responsive, and like everything I make, is tested for performance and accessibility using the [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audits in Chrome developer tools, [axe](https://www.deque.com/axe/), [webhint](https://webhint.io/), and [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
 
