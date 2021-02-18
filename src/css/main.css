@@ -15,8 +15,7 @@
   --git: #c13f21;
   --npm: #c53635;
   --stylelint: #fff;
-  --stylelintlight: #000;
-  --photoshop: #ed1b23; }
+  --stylelintlight: #000; }
 
 html {
   box-sizing: border-box;
@@ -72,6 +71,7 @@ a:hover.light {
 body.light,
 #header.light,
 #about.light,
+#professional.light,
 #major.light,
 #minor.light,
 #skills.light,
@@ -80,6 +80,7 @@ body.light,
   color: var(--black); }
 
 #about,
+#professional,
 #major,
 #minor,
 #skills,
@@ -162,6 +163,53 @@ body.light,
     #about .about__blurb .about__name.light {
       color: var(--themeYellow); }
 
+#professional {
+  background-color: var(--black);
+  color: var(--white);
+  transition: all 0.5s ease; }
+  #professional .professional__project {
+    margin-bottom: 4rem; }
+    #professional .professional__project .professional__project--title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-size: 1.5rem; }
+    #professional .professional__project .professional__img--big {
+      width: 100%;
+      margin: 0 auto 1.5rem;
+      max-width: 500px;
+      display: block;
+      border-radius: 4px; }
+    #professional .professional__project .professional__right {
+      display: flex;
+      margin: 0 auto 1.5rem;
+      justify-content: space-evenly;
+      max-width: 480px; }
+      #professional .professional__project .professional__right .professional__img--small {
+        height: 200px;
+        border-radius: 4px; }
+      #professional .professional__project .professional__right .professional__right--link {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; }
+        #professional .professional__project .professional__right .professional__right--link a {
+          margin: 0.7rem 0;
+          color: var(--blue);
+          transition: all 0.5s ease; }
+        #professional .professional__project .professional__right .professional__right--link a.light {
+          color: var(--themeBlue); }
+    #professional .professional__project .professional__description {
+      margin: 0 auto;
+      line-height: 1.5;
+      max-width: 650px; }
+      #professional .professional__project .professional__description .tech {
+        color: var(--yellow);
+        transition: all 0.5s ease; }
+      #professional .professional__project .professional__description .tech.light {
+        color: var(--themeYellow); }
+  #professional .professional__project:last-child {
+    margin-bottom: 0; }
+
 #major {
   background-color: var(--black);
   color: var(--white);
@@ -195,7 +243,7 @@ body.light,
         #major .major__project .major__right .major__right--links .major__right--link.light {
           color: var(--themeBlue); }
       #major .major__project .major__right .major__img--small {
-        height: 175px;
+        height: 200px;
         border-radius: 4px; }
     #major .major__project .major__description {
       margin: 0 auto;
@@ -292,8 +340,6 @@ body.light,
         transition: all 0.5s ease; }
       #skills .skills__list .skills__item .stylelint.light {
         fill: var(--stylelintlight); }
-      #skills .skills__list .skills__item .fa-adobe {
-        color: var(--photoshop); }
       #skills .skills__list .skills__item .skills__img {
         height: 50px; }
       #skills .skills__list .skills__item p {
