@@ -1,31 +1,30 @@
 // ************************* Imports *************************
 
-const { src, dest, series, parallel, watch } = require('gulp'),
-  // BrowserSync for dev server and hot reloading
-  bs = require('browser-sync').create(),
-  sass = require('gulp-sass'),
-  // fs needed to check if src/css file exists in development
-  fs = require('fs'),
-  // Minimize HTML
-  htmlmin = require('gulp-htmlmin'),
-  // Minimize & optimize CSS
-  cleanCSS = require('gulp-clean-css'),
-  // Remove unused/dead CSS
-  purifyCSS = require('gulp-purifycss'),
-  // PostCSS with autoprefixer
-  postCSS = require('gulp-postcss'),
-  // Babel for Gulp
-  babel = require('gulp-babel'),
-  // Minimize JS
-  uglify = require('gulp-uglify'),
-  // Minify images
-  imagemin = require('gulp-imagemin'),
-  // Show sizes of files in the terminal
-  size = require('gulp-size'),
-  // Remove comments from files for production
-  strip = require('gulp-strip-comments'),
-  // Used to wipe contents of dist when running build task
-  del = require('del');
+const { src, dest, series, parallel, watch } = require('gulp');
+// BrowserSync for dev server and hot reloading
+const bs = require('browser-sync').create();
+const sass = require('gulp-sass')(require('sass'));
+sass.compiler = require('sass');
+// Minimize HTML
+const htmlmin = require('gulp-htmlmin');
+// Minimize & optimize CSS
+const cleanCSS = require('gulp-clean-css');
+// Remove unused/dead CSS
+const purifyCSS = require('gulp-purifycss');
+// PostCSS with autoprefixer
+const postCSS = require('gulp-postcss');
+// Babel for Gulp
+const babel = require('gulp-babel');
+// Minimize JS
+const uglify = require('gulp-uglify');
+// Minify images
+const imagemin = require('gulp-imagemin');
+// Show sizes of files in the terminal
+const size = require('gulp-size');
+// Remove comments from files for production
+const strip = require('gulp-strip-comments');
+// Used to wipe contents of dist when running build task
+const del = require('del');
 
 // ************************* Folder Paths *************************
 
@@ -38,16 +37,21 @@ const paths = {
   devJS: 'src/js/*.js',
   devImages: 'src/images/*.{png,gif,jpg,jpeg,svg}',
   devFavicons: 'src/*.{ico,png,xml,svg,webmanifest}',
-  devDocs: 'src/docs/*.pdf',
   prodCSS: 'dist/css',
   prodJS: 'dist/js',
   prodImages: 'dist/images',
-  prodDocs: 'dist/docs',
   normalize: 'src/css/normalize.css',
-  prodHeaders: 'dist'
 };
 
 // ************************* Development Tasks *************************
+
+// Compile Sass to CSS in development
+function serveSass() {
+  return src(paths.devSCSS)
+    .pipe(sass())
+    .pipe(dest(paths.devCSS))
+    .pipe(bs.stream());
+}
 
 // Task to run the BrowserSync server
 function browserSync() {
@@ -65,14 +69,6 @@ function browserSync() {
   watch(paths.devHTML).on('change', bs.reload);
   watch(paths.devSCSS, serveSass);
   watch(paths.devJS).on('change', bs.reload);
-}
-
-// Compile Sass to CSS in development
-function serveSass() {
-  return src(paths.devSCSS)
-    .pipe(sass())
-    .pipe(dest(paths.devCSS))
-    .pipe(bs.stream());
 }
 
 // ************************* Production Tasks *************************
@@ -129,17 +125,13 @@ function buildJS() {
     .pipe(dest(paths.prodJS));
 }
 
-function buildDocs() {
-  return src(paths.devDocs).pipe(dest(paths.prodDocs));
-}
-
 // Minimize images
-// function buildImages() {
-//   return src(paths.devImages)
-//     .pipe(imagemin())
-//     .pipe(size({ showFiles: true }))
-//     .pipe(dest(paths.prodImages));
-// }
+function buildImages() {
+  return src(paths.devImages)
+    .pipe(imagemin())
+    .pipe(size({ showFiles: true }))
+    .pipe(dest(paths.prodImages));
+}
 
 // ************************* Exported Tasks *************************
 
@@ -156,7 +148,6 @@ exports.build = series(
     buildCSS,
     buildNormalize,
     buildJS,
-    // buildImages,
-    buildDocs,
+    buildImages
   )
 );
