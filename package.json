@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Dan Buda's Development Portfolio",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "gulp build",
+    "serve": "gulp serve"
+  },
   "keywords": [],
   "author": "Dan Buda",
   "repository": {
