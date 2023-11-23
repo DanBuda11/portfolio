@@ -1,6 +1,7 @@
 {
   "name": "dan-buda-portfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "type": "module",
   "description": "Dan Buda's Development Portfolio",
   "main": "index.js",
   "scripts": {
@@ -20,33 +21,33 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "devDependencies": {
-    "@babel/core": "^7.22.1",
-    "@babel/eslint-parser": "^7.21.8",
-    "@babel/preset-env": "^7.22.4",
-    "autoprefixer": "^10.4.14",
-    "browser-sync": "^2.29.3",
-    "del": "^6.1.1",
-    "eslint": "^8.42.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-html": "^7.1.0",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-prettier": "^4.2.1",
+  "dependencies": {
+    "@babel/core": "^7.23.2",
+    "@babel/eslint-parser": "^7.22.15",
+    "@babel/preset-env": "^7.23.2",
+    "autoprefixer": "^10.4.16",
+    "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^7.1.0",
+    "gulp-imagemin": "^9.0.0",
     "gulp-postcss": "^9.0.1",
     "gulp-purifycss": "^0.2.0",
-    "gulp-sass": "^5.1.0",
-    "gulp-size": "^4.0.1",
-    "gulp-strip-comments": "^2.5.2",
-    "gulp-uglify": "^3.0.2",
-    "prettier": "^2.8.8",
-    "sass": "^1.62.1",
-    "stylelint": "^15.6.3",
-    "stylelint-config-standard": "^33.0.0"
+    "gulp-size": "^5.0.0",
+    "gulp-strip-comments": "^2.6.0",
+    "gulp-uglify": "^3.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "eslint": "^8.52.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-prettier": "^5.0.1",
+    "prettier": "^3.0.3",
+    "stylelint": "^15.11.0",
+    "stylelint-config-standard": "^34.0.0"
   }
 }
