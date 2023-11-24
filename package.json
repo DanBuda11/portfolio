@@ -1,6 +1,6 @@
 {
   "name": "dan-buda-portfolio",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "type": "module",
   "description": "Dan Buda's Development Portfolio",
   "main": "index.js",
@@ -22,9 +22,9 @@
     "not op_mini all"
   ],
   "dependencies": {
-    "@babel/core": "^7.23.2",
-    "@babel/eslint-parser": "^7.22.15",
-    "@babel/preset-env": "^7.23.2",
+    "@babel/core": "^7.23.3",
+    "@babel/eslint-parser": "^7.23.3",
+    "@babel/preset-env": "^7.23.3",
     "autoprefixer": "^10.4.16",
     "del": "^7.1.0",
     "gulp": "^4.0.2",

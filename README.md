@@ -8,6 +8,6 @@ This is made with one HTML file and one CSS file, on a simple [gulp framework I 
 
 It's fully responsive, and like everything I make, is tested for performance and accessibility using the [Lighthouse](https://developers.google.com/web/tools/lighthouse/) audits in Chrome developer tools, [axe](https://www.deque.com/axe/), [webhint](https://webhint.io/), and [Google PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/).
 
-The CSS part of the site includes a lot of Flexbox to handle layout and responsive design, a few `@media` queries where necessary, the use of CSS custom properties to make it easier to change color schemes if desired, and CSS Nesting in place of something like Sass.
+The CSS part of the site includes a lot of Flexbox to handle layout and responsive design, a few `@media` queries where necessary, and the use of CSS custom properties to make it easier to change color schemes if desired. Sass, which was originally part of this build, was removed to start a transition to CSS Nesting.
 
 Feedback is always welcome!
