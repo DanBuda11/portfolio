@@ -2,6 +2,9 @@
   "name": "dan-buda-portfolio",
   "version": "2.0.2",
   "type": "module",
+  "engines": {
+    "node": ">=18.19.0"
+  },
   "description": "Dan Buda's Development Portfolio",
   "main": "index.js",
   "scripts": {
