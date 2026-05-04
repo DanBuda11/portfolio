@@ -1,6 +1,6 @@
 {
   "name": "dan-buda-portfolio",
-  "version": "2.1.5",
+  "version": "2.1.6",
   "type": "module",
   "engines": {
     "node": ">=20.18.3"
@@ -27,8 +27,8 @@
   "dependencies": {
     "@babel/core": "^7.29.0",
     "@babel/eslint-parser": "^7.28.6",
-    "@babel/preset-env": "^7.29.0",
-    "autoprefixer": "^10.4.24",
+    "@babel/preset-env": "^7.29.3",
+    "autoprefixer": "^10.5.0",
     "del": "^7.1.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
@@ -50,7 +50,7 @@
     "eslint-plugin-html": "^8.1.4",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-prettier": "^5.5.5",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.3",
     "stylelint": "^16.26.1",
     "stylelint-config-standard": "^36.0.1"
   }
